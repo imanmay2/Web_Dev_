@@ -1,5 +1,5 @@
-<!-- ![Logo](html.jpeg) -->
-<kbd>![image](html.jpeg)</kbd>
+<!-- ![Logo](html.jpg) -->
+<kbd>![Image](html.jpg)</kbd>
 
     
 # HTML-(HYPER TEXT MARKUP LANGUAGE )
