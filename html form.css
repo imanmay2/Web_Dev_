@@ -1,0 +1,31 @@
+textarea{
+    background-color: aqua;
+}
+input[type="text"]{
+    color: yellow;
+    background-color:blue;
+}
+*{
+    font-size: medium;
+    font-weight: 900;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    word-spacing: 189%;
+}
+input[type="submit"]:hover{
+    background-color: brown;
+    text-decoration: underline;
+    font-weight: 1000;
+    word-spacing: 80%;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+input[type="reset"]:hover{
+    background-color: yellowgreen;
+    text-decoration: overline;
+    font-weight: 1000;
+    word-spacing: 80%;
+    cursor: zoom-in;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 4cm;
+    border: none;
+}
