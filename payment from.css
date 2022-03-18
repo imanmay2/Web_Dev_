@@ -1,0 +1,11 @@
+div{
+    max-height: max-content;
+    background-color:cyan;
+}
+.hello{
+    width: 40%;
+    background-color: greenyellow;
+}
+.hey{
+    width: 50%;
+}
