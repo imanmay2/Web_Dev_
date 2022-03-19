@@ -1,0 +1,15 @@
+#main{
+    background-color: pink;
+    color: white;
+    height: 100px;
+    text-align: center;
+    padding-top: 8px;
+}
+#nav{
+    background-color: black;
+    color: white;
+    position:sticky;
+    top:0px;
+    height: 30px;
+    font-size: 20px;
+}
