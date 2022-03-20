@@ -1,6 +1,8 @@
-let n=document.querySelector('button');
-n.addEventListener('click','input');
+// let n=document.querySelector('button');
+// n.addEventListener('click','input');
+let but=document.getElementById("but");
+
 function input(){
     let name=prompt('Enter your name please');
-    n.textContent='WELCOME'+name;
+    but.innerHTML='WELCOME '+name;
 }
