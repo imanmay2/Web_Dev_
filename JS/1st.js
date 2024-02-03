@@ -11,7 +11,7 @@ const product= {
 // let and const are the two variable declaration method.
 //     1. let can be used to declare only once, later we can change the value of that particular variable.
 //     2. const can also be used to declare a variable only once, but here , we can't change/ update the value, once it is already declared.
-
+//     3. var can be used as a global varaiable.
 
 console.log(product);   // exisitng entered by the user.
 product.rating=5;
