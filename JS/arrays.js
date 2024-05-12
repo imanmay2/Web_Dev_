@@ -24,7 +24,7 @@ console.log("Average marks of the marks : ",avg);
 
 
 
-// Given an array of prices . Appply 30% OFF on each item and print the array.
+// Given an array of prices . Apply 30% OFF on each item and print the array.
 let arr=[250,645,300,900,50];
 for(let i=0;i<arr.length;i++){
     arr[i]=arr[i]*0.90;
