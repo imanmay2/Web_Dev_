@@ -53,7 +53,7 @@ let arr=[1,2,3,4,5,6];
 arr.forEach(function print_Val(val,inx,arr){
     console.log(val);
 });
-/// used above one with the help pf arrow function.
+/// used above one with the help of arrow function.
 arr.forEach((val,indx,arr)=> {
     console.log(val);
 });
