@@ -72,7 +72,7 @@ let rand=prompt("Enter the random number : ");
 let num=prompt("Enter the guessing number : ");
 while(num!=rand){
     console.log("Sorry!! number doesn't matched.");
-    num=prompt("Enter the number again : ");       // promp returns string type of value.
+    num=prompt("Enter the number again : ");       // prompt returns string type of value.
     if(num==rand){
         console.log("Number matched !!!!");
     }
