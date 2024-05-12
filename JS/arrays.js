@@ -43,7 +43,7 @@ console.log("The array after applying 10% OFF is : \n ", arr);
 
 
 
-//// Create a array which stroes companies , Bloomberg,Microsoft,Uber, Google,IBM, Netflix
+//// Create an array which stroes companies , Bloomberg,Microsoft,Uber, Google,IBM, Netflix
 let arr_comp=["Bloomberg","Microsoft","Uber", "Google","IBM", "Netflix"];
 // i) remove the first company from the array of companies from the elements.
 arr_comp.shift();
