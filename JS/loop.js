@@ -55,10 +55,12 @@ for(let key in student){
 
 // Q1. print all the Even and odd number from 1 to n.
 let n=prompt("Enter the range : ");
-console.log("Evens numbers : ");
 for(let i=1;i<=n;i++){
-    if(i%2==0){
-        console.log(i);
+    if(i%2===0){
+        console.log("Even",i);
+    }
+    else if(i%2!==0){
+        console.log("Odd",i);
     }
 }
 
