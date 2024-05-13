@@ -24,8 +24,8 @@
 
 
 
-let x=document.querySelector("div");
-console.dir(x);
+// let x=document.querySelector("p");
+
 
 
 
