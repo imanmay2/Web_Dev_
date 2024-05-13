@@ -31,9 +31,14 @@
 // 3. Create a new button element.Give it a text "click me" , background color of red and text color of white.
 //          Insert the button as the first element inside the body tag.
 
-let btn=document.createElement("button");
-btn.innerHTML="<b>Click me!</b>";
-btn.style.backgroundColor="red";
-btn.style.color="white";
-let x=document.querySelector("body");
-x.prepend(btn);
+// let btn=document.createElement("button");
+// btn.innerHTML="<b>Click me!</b>";
+// btn.style.backgroundColor="red";
+// btn.style.color="white";
+// let x=document.querySelector("body");
+// x.prepend(btn);
+
+
+
+//4. Create a <p> tag in html,give it a class and some styling.
+//          Now create a new class in CSS and try to append this class to the <p> element.
