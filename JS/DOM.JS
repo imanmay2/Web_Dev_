@@ -30,3 +30,25 @@
 
 
 
+// let x=document.querySelector("h1");
+// console.log(x.getAttribute("id"));
+// x.setAttribute("id","Hello Germany!!");
+// // console.log(x.getAttribute("id"));
+
+
+
+
+// let x=document.querySelector(".box");
+// x.style.backgroundColor="pink";
+// x.innerText="Anwesha";
+// x.style.fontSize="20";
+
+
+
+// let x=document.querySelector("div");
+// let ele=document.createElement("div");
+// ele.innerHTML="<b>Hello Div</b>";
+// x.before(ele);
+// x.remove();
+
+
