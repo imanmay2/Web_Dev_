@@ -13,8 +13,20 @@
 // console.log(x);
 
 
-//
-
 
 // let x=document.querySelectorAll("p")[1]
 // console.dir(x);
+
+
+
+// let x=document.querySelectorAll("#class2");
+// console.dir(x);
+
+
+
+let x=document.querySelector("div");
+console.dir(x);
+
+
+
+
