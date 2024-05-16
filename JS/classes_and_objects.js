@@ -31,7 +31,7 @@ manmay.__proto__=Employee;
 
 
 
-CLASSES
+//CLASSES
 
 class car{
     constructor(brand){
