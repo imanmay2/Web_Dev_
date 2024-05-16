@@ -65,7 +65,7 @@ nexus.setBrand("Germany");
 class Person{
     constructor(){
         this.species="Homosapiens";
-        console.log("Entered in Parent");
+        console.log("Entered in Parent Class");
     }
     eat(){
         console.log("Eating");
@@ -77,7 +77,7 @@ class Person{
 
 class Engineer extends Person{
     constructor(branch){
-        console.log("Entered in child");
+        console.log("Entered in child Class");
         super();
         this.branch=branch;
         console.log("Exit");
