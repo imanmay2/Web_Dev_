@@ -70,7 +70,7 @@ arr.forEach((val)=>{
 
 
 // MAP : It creates a new array with the results of some operations.
-//       the value its callback returns are used to frm new array.
+//       the value its callback returns are used to from new array.
  let arr=[1,2,3,4];
  arr.map((val) => {
     console.log(val); }
