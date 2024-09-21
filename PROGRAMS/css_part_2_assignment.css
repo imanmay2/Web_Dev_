@@ -1,3 +1,5 @@
+/* PART----A */
+
 #mainTopic{
     color: blue;
 }
@@ -20,4 +22,15 @@ div>button{
     color:azure;
 }
 
+
+
+
+
+
+/* PART---B */
+
+button:hover{
+    background-color: yellow;
+    color:blue;
+}
 
