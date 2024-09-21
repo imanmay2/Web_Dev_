@@ -1,0 +1,20 @@
+*{
+    font-family:'Courier New', Courier, monospace;
+}
+
+#facebook{
+    color:#1b74e4;
+}
+
+.buttons{
+    background-color: aqua;
+}
+
+#button2{
+    background-color: black;
+    color:white;
+}
+
+div[id="myID"]>p{
+    color:green;
+}
