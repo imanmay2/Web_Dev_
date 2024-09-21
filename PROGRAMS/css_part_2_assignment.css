@@ -44,9 +44,11 @@ h1::first-letter{
 }
 
 
-input[type="checkbox"]:active{
+#yes:checked + label{
     color: darkgreen;
 }
+
+
 
 
 
