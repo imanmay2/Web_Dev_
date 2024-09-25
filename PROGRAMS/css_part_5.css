@@ -1,0 +1,8 @@
+.outer{
+    border:1px solid black;
+    height:400px;
+    width:600px;
+    margin: 80px auto;
+    display: flex;
+    flex-direction: column;
+}
