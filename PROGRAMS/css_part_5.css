@@ -4,5 +4,26 @@
     width:600px;
     margin: 80px auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: flex-start;    /*  shifts left for start, and right for end*/
+    flex-wrap: wrap;
+    align-items: flex-start;   /* shifts upwards and downwards*/
+    align-content: space-between;
+   
+
 }
+
+
+
+div+div{
+    flex-grow: 1;
+    max-width: 50px;
+    min-width:50px;
+    flex-shrink: 2;
+}
+
+.outer div{
+    height: 100px;
+    width: 200px;
+}
+
