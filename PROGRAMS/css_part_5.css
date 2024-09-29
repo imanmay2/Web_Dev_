@@ -33,7 +33,7 @@ div+div{
     display: flex;
     height: 50px;
     width: 900px;
-    justify-content: space-evenly;
+    justify-content: space-around;
     
     border-radius: 10px;
     border: 2px solid lightseagreen;
