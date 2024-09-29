@@ -27,5 +27,22 @@ div+div{
 }
 
 
+.outer_nav{
+    border-radius: 10px;
+    background-color: pink;
+    display: flex;
+    height: 50px;
+    width: 900px;
+    justify-content: space-evenly;
+    
+    border-radius: 10px;
+    border: 2px solid lightseagreen;
+}
 
 
+.outer_nav div{
+    height: 50px;
+    width: 80px;
+    font-size:24px;
+    background-color: pink;
+}
