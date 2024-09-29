@@ -5,12 +5,10 @@
     margin: 80px auto;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;    /*  shifts left for start, and right for end*/
+    justify-content: flex-start;    /*  shifts left for start, and right for end */
     flex-wrap: wrap;
-    align-items: flex-start;   /* shifts upwards and downwards*/
+    align-items: flex-start;   /* shifts upwards and downwards */
     align-content: space-between;
-   
-
 }
 
 
