@@ -20,8 +20,12 @@ div+div{
     flex-shrink: 2;
 }
 
+
 .outer div{
     height: 100px;
     width: 200px;
 }
+
+
+
 
