@@ -1,0 +1,33 @@
+.container{
+    height:300px;
+    width:320px;
+    display:inline-grid;
+    grid-template-columns: 100px 100px 100px;
+    border: 1px solid grey;
+    margin: 80px auto;
+    border-radius: 10px;
+    grid-gap: 10px 10px;
+    /* grid-row-start: 0;
+    grid-row-end: 2; */
+}
+
+
+
+.container div{
+    background-color: yellow;
+    border-radius: 10px;
+    text-align: center;
+    align-content: center;
+}
+
+.helloA{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#hey{
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+    display: inline-grid;
+}
