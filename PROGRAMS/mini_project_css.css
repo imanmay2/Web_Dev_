@@ -1,0 +1,12 @@
+body{
+    background-color: black;
+    color: white;
+}
+.main{
+    background-color: grey;
+    border-radius: 5px;
+    height:100%;
+    width:15%;
+    
+
+}
