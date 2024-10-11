@@ -28,29 +28,56 @@
 
 
 // Create a switch statement for printing the day in the week.
-let day = prompt("Enter the day - ")
-switch (day) {
-    case "1":
-        console.log("Sunday");
-        break;
-    case "2":
-        console.log("Sunday");
-        break;
-    case "3":
-        console.log("Sunday");
-        break;
-    case "4":
-        console.log("Sunday");
-        break;
-    case "5":
-        console.log("Sunday");
-        break;
-    case "6":
-        console.log("Sunday");
-        break;
-    case "7":
-        console.log("Sunday");
-        break;
-    default:
-        console.log("Please enter between 1-7")
+// let day = prompt("Enter the day - ")
+// switch (day) {
+//     case "1":
+//         console.log("Sunday");
+//         break;
+//     case "2":
+//         console.log("Sunday");
+//         break;
+//     case "3":
+//         console.log("Sunday");
+//         break;
+//     case "4":
+//         console.log("Sunday");
+//         break;
+//     case "5":
+//         console.log("Sunday");
+//         break;
+//     case "6":
+//         console.log("Sunday");
+//         break;
+//     case "7":
+//         console.log("Sunday");
+//         break;
+//     default:
+//         console.log("Please enter between 1-7")
+// }
+
+// Write a program that will print good , if the number is divisible by 10, and bad if not.
+// let num=prompt("Enter the number : ");
+// if(num%10==0){
+//     alert(`${num} is a Good number. `);
+// }
+// else{
+//     alert(`${num} is not Good number. `);
+// }
+
+
+// Write a program, that will print the largest of the 2 numbers.
+// let num1=prompt("Enter the number1 : ");
+// let num2=prompt("Enter the numebr2 : ");
+// let num3=prompt("Enter the number3 : ");
+// console.log(`The Largest number is : ${Math.max(num1,num2,num3)}`);
+
+
+//Write a program , that will check whether the last digit of the 2 inputted number is same or not.
+num1=prompt("Enter the number 1  : ");
+num2=prompt("Enter the number 2 : ");
+if(num1%10==num2%10){
+    alert("Last Digit is Same.");
+}
+else{
+    alert("Last Digit is not Same.");
 }
