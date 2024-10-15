@@ -1,4 +1,4 @@
-// Write a JS program to find the no of digits in a number.
+//Q1. Write a JS program to find the no of digits in a number.
 let n=prompt("Enter the number : ");
 console.log("The number of the digit : ",n.toString().length);
 
@@ -15,7 +15,6 @@ while(n!=0){
 }
 console.log("Sum of the digit : ");
 console.log(s);
-
 
 
 
@@ -47,3 +46,14 @@ for(let i=0;i<arr_.length;i++){
 if(f==false){
     console.log(`The maximum number is : ${max_}`);
 }
+
+
+//Q5. Write a Javascript program that will erase a num occurence from the array.
+let arr_=[1,2,2,3,4,5,6,2,7,8];
+let num=prompt("Enter the number : ");
+for(let i=0;i<arr_.length;i++){
+    if(num==arr_[i]){
+        arr_.splice(i,1);
+    }
+}
+console.log(`Updated Array is as follows : ${arr_}`);
