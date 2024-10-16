@@ -2,11 +2,11 @@ let task_arr=[];
 while(true){
     let req=prompt("Enter the task : ").toLowerCase();
     if(req=="list"){
+        console.log("--------------------");
         for(let i=0;i<task_arr.length;i++){
-            console.log("--------------------");
             console.log(`${i} ${task_arr[i]}`);
-            console.log("--------------------");
         }
+        console.log("--------------------");
     }
     else if(req=="add"){
         let task=prompt("Enter the task to be added : ");
@@ -21,5 +21,8 @@ while(true){
     else if(req=="quit"){
         console.log("Quitted Successfully ! :( ");
         break;
+    }
+    else{
+        console.log("No such command exists ! ");
     }
 }
