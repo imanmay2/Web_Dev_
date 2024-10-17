@@ -8,15 +8,18 @@
 
 
 
-let student=[
-    manmay={
-        name:"Manmay",
-        college:"VIT",
-        father_name:"Jatin Chakraborty"
-    },
-    anwesha={
-        name:"Anwesha",
-        college:"VIT",
-        father_name:"Chiranjib Jana"
-    }
-];
+// let student=[
+//     manmay={
+//         name:"Manmay",
+//         college:"VIT",
+//         father_name:"Jatin Chakraborty"
+//     },
+//     anwesha={
+//         name:"Anwesha",
+//         college:"VIT",
+//         father_name:"Chiranjib Jana"
+//     }
+// ];
+
+
+console.log(Math.floor(Math.random()*100)+1);
