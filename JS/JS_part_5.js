@@ -8,15 +8,15 @@
 
 
 
-let student={
-    manmay:{
+let student=[
+    manmay={
         name:"Manmay",
         college:"VIT",
         father_name:"Jatin Chakraborty"
     },
-    anwesha:{
+    anwesha={
         name:"Anwesha",
         college:"VIT",
         father_name:"Chiranjib Jana"
     }
-};
+];
