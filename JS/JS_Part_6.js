@@ -15,3 +15,11 @@
 // averageNum(1,2,3);
 
 
+// Q3. Create a function that prints the multiplication table of a number.
+function multiplicationTable(n){
+    for(let i=1;i<=10;i++){
+        console.log(`${n} * ${i} = ${n*i}`);
+    }
+}
+console.log("Multiplication table is : ");
+multiplicationTable(4);
