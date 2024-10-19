@@ -25,12 +25,24 @@
 // multiplicationTable(4);
 
 
-//Q4. Create a function that will return the sum of numbers from 1 to n.
-function sumN(n){
-    let s=0;
-    for(let i=1;i<=n;i++){
-        s=s+i;
-    }
-    return s;
+// // Q4. Create a function that will return the sum of numbers from 1 to n.
+// function sumN(n){
+//     let s=0;
+//     for(let i=1;i<=n;i++){
+//         s=s+i;
+//     }
+//     return s;
+// }
+// console.log(`The sum of the number is : ${sumN(3)}`);
+
+
+// Q5. Create a function that will take an array as argument and return the concatenation of all strings.
+function concatArr(arr){
+    console.log(arr);
+    let str='';
+     for(let i=0;i<=arr.length;i++){
+        str=str+arr[i];
+     }
+     return str;
 }
-console.log(`The sum of the number is : ${sumN(3)}`);
+console.log("Concatination String is : "+concatArr(["Manmay","Anwesha"]));
