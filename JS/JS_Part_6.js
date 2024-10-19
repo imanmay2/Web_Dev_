@@ -15,11 +15,22 @@
 // averageNum(1,2,3);
 
 
-// Q3. Create a function that prints the multiplication table of a number.
-function multiplicationTable(n){
-    for(let i=1;i<=10;i++){
-        console.log(`${n} * ${i} = ${n*i}`);
+// // Q3. Create a function that prints the multiplication table of a number.
+// function multiplicationTable(n){
+//     for(let i=1;i<=10;i++){
+//         console.log(`${n} * ${i} = ${n*i}`);
+//     }
+// }
+// console.log("Multiplication table is : ");
+// multiplicationTable(4);
+
+
+//Q4. Create a function that will return the sum of numbers from 1 to n.
+function sumN(n){
+    let s=0;
+    for(let i=1;i<=n;i++){
+        s=s+i;
     }
+    return s;
 }
-console.log("Multiplication table is : ");
-multiplicationTable(4);
+console.log(`The sum of the number is : ${sumN(3)}`);
