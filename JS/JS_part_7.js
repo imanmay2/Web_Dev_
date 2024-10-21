@@ -10,3 +10,12 @@
 //     }
 // }.
 
+
+// Use of try-catch keyword.
+
+// try{
+//     console.log(a);
+// } catch(err){
+//     console.log(err);
+// }
+// console.log("Hello!");
