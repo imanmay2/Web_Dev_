@@ -42,3 +42,14 @@
 // console.log("Welcome ");
 
 
+//setInterval.
+let id1=setInterval(()=>{
+    console.log("Hi!!!!");
+},2000);
+
+
+let id2=setInterval(()=>{
+    console.log("Hello!!!!");
+},2000);
+
+clearInterval(id1);
