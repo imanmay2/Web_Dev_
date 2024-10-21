@@ -1,45 +1,45 @@
 //Use of this keyword.
 
-// const student={
-//     name:"Anwesha",
-//     eng:94,
-//     math:90,
-//     phy:90,
-//     getAvg(){
-//         console.log(`${this.name} has got an average marks of ${(this.eng+this.math+this.phy)/3}`);
-//     }
-// }.
+const student={
+    name:"Anwesha",
+    eng:94,
+    math:90,
+    phy:90,
+    getAvg(){
+        console.log(`${this.name} has got an average marks of ${(this.eng+this.math+this.phy)/3}`);
+    }
+}
 
 
 // Use of try-catch keyword.
-// try{
-//     console.log(a);
-// } catch(err){
-//     console.log(err);
-// }
-// console.log("Hello!");
+try{
+    console.log(a);
+} catch(err){
+    console.log(err);
+}
+console.log("Hello!");
 
 
 //Arrow Functions.
-// const sum=(a,b)=>{
-//     console.log(a+b);
-// };
-// sum(4,4);
+const sum=(a,b)=>{
+    console.log(a+b);
+};
+sum(4,4);
 
-// //Implicit Function.
-// const multiply=(a,b)=>(
-//     a*b
-// );
+//Implicit Function.
+const multiply=(a,b)=>(
+    a*b
+);
 
-// console.log(multiply(4,4));
+console.log(multiply(4,4));
 
 
 //setTimeout function.
-// console.log("hello");
-// setTimeout(()=>{
-//     console.log("To Apna College! ");
-// },2000);
-// console.log("Welcome ");
+console.log("hello");
+setTimeout(()=>{
+    console.log("To Apna College! ");
+},2000);
+console.log("Welcome ");
 
 
 //setInterval.
