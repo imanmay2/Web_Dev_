@@ -12,10 +12,33 @@
 
 
 // Use of try-catch keyword.
-
 // try{
 //     console.log(a);
 // } catch(err){
 //     console.log(err);
 // }
 // console.log("Hello!");
+
+
+//Arrow Functions.
+// const sum=(a,b)=>{
+//     console.log(a+b);
+// };
+// sum(4,4);
+
+// //Implicit Function.
+// const multiply=(a,b)=>(
+//     a*b
+// );
+
+// console.log(multiply(4,4));
+
+
+//setTimeout function.
+// console.log("hello");
+// setTimeout(()=>{
+//     console.log("To Apna College! ");
+// },2000);
+// console.log("Welcome ");
+
+
