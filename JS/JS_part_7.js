@@ -62,6 +62,7 @@ let student={
         console.log(this); //returns student object.
     },
     getName:()=>{
-        console.log();  //returns window object.
-    }
+        console.log(this);  //returns window object.
+    },
+    
 };
