@@ -1,55 +1,9 @@
-//Use of this keyword.
-
-const student={
+let student={
     name:"Anwesha",
-    eng:94,
-    math:90,
-    phy:90,
+    comp:98,
+    math:99,
+    chem:100,
     getAvg(){
-        console.log(`${this.name} has got an average marks of ${(this.eng+this.math+this.phy)/3}`);
+        console.log(`${this.name} got an average marks of ${(this.chem+this.math+this.comp)/3}`);
     }
 }
-
-
-// Use of try-catch keyword.
-try{
-    console.log(a);
-} catch(err){
-    console.log(err);
-}
-console.log("Hello!");
-
-
-//Arrow Functions.
-const sum=(a,b)=>{
-    console.log(a+b);
-};
-sum(4,4);
-
-//Implicit Function.
-const multiply=(a,b)=>(
-    a*b
-);
-
-console.log(multiply(4,4));
-
-
-//setTimeout function.
-console.log("hello");
-setTimeout(()=>{
-    console.log("To Apna College! ");
-},2000);
-console.log("Welcome ");
-
-
-//setInterval.
-let id1=setInterval(()=>{
-    console.log("Hi!!!!");
-},2000);
-
-
-let id2=setInterval(()=>{
-    console.log("Hello!!!!");
-},2000);
-
-clearInterval(id1);
