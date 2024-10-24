@@ -79,14 +79,27 @@
 // console.log(maxi);
 
 
-// Check whether all the elements in the array is a multiple of 10 or not.
-let arr=[10,20,30,40];
-let check=arr.every((ele)=>{
-    return ele%10==0;
+// // Check whether all the elements in the array is a multiple of 10 or not.
+// let arr=[10,20,30,40];
+// let check=arr.every((ele)=>{
+//     return ele%10==0;
+// });
+// if(check==true){
+//     alert("Yes ,all elements are multiple of 10.");
+// }
+// else{
+//     alert("No, All are not multiple of 10.");
+// }
+
+
+//Create a function to find a minimum number in the array.
+let num=[-1,0,1,2,3,4,5,6,7,8];
+let min=num.reduce((res,ele)=>{
+    if(res>ele){
+        return ele;
+    }
+    else{
+        return res; 
+    }
 });
-if(check==true){
-    alert("Yes ,all elements are multiple of 10.");
-}
-else{
-    alert("No, All are not multiple of 10.");
-}
+console.log(min);
