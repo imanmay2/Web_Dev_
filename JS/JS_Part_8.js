@@ -68,12 +68,25 @@
 
 
 
-// Find Maximum of the array using the Reduce Function of the array.
-let arr=[1,2,3,4,5,6,7,8];
-let maxi=arr.reduce((res,ele)=>{
-    if(res<ele){
-        return ele;
-    }
-});
+// // Find Maximum of the array using the Reduce Function of the array.
+// let arr=[1,2,3,4,5,6,7,8];
+// let maxi=arr.reduce((res,ele)=>{
+//     if(res<ele){
+//         return ele;
+//     }
+// });
 
-console.log(maxi);
+// console.log(maxi);
+
+
+// Check whether all the elements in the array is a multiple of 10 or not.
+let arr=[10,20,30,40];
+let check=arr.every((ele)=>{
+    return ele%10==0;
+});
+if(check==true){
+    alert("Yes ,all elements are multiple of 10.");
+}
+else{
+    alert("No, All are not multiple of 10.");
+}
