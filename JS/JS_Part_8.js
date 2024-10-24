@@ -5,6 +5,7 @@ print=function(el){
 }
 
 
+
 //creating an array with objects.
 let arr1=[
     {
@@ -16,8 +17,42 @@ let arr1=[
     }
 ];
 
-arr1.forEach(
-    function(student){
-        console.log(`${student.marks}`);
-    }
-)
+
+// arr1.forEach(
+//     function(student){
+//         console.log(`${student.marks}`);
+//     }
+// )
+
+
+// //using the map function.
+// let num=[1,2,3,4];
+// let updated_arr=num.map(function(ele){
+//     return ele*2;
+// });
+
+// console.log(updated_arr);
+
+
+// //Filter method..
+// let num=[1,2,3,4];
+// let even=num.filter((ele)=>{
+//     return ele%2==0;
+// });
+
+// let odd=num.filter(function(ele){
+//     return ele%2!=0;
+// });
+// console.log(odd);
+
+
+
+//Trying Every and Some function.
+let num=[1,2,3,4];
+console.log(num.every((el)=>{
+    return el%2==0;
+}));
+
+console.log(num.some((el)=>{
+    return el%2==0;
+}));
