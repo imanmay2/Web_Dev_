@@ -22,3 +22,15 @@ let unique_=(str)=>{
         console.log(i);
     }
 }
+
+
+//Q3. Write a function that will print the largest word from the array.
+let findLargest=(arr)=>{
+    let arr1=[];
+    for(let i of arr.length){
+        arr1.push(i.length);
+    }
+
+    //finding the maximum one from the arr1 array.
+    
+}
