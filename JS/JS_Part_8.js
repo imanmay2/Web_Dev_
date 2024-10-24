@@ -48,11 +48,11 @@ let arr1=[
 
 
 //Trying Every and Some function.
-let num=[1,2,3,4];
-console.log(num.every((el)=>{
-    return el%2==0;
-}));
+// let num=[1,2,3,4];
+// console.log(num.every((el)=>{
+//     return el%2==0;
+// }));
 
-console.log(num.some((el)=>{
-    return el%2==0;
-}));
+// console.log(num.some((el)=>{
+//     return el%2==0;
+// }));
