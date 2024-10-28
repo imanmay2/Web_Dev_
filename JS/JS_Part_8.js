@@ -34,8 +34,8 @@
 // let updated_arr=num.map(function(ele){
 //     return ele*2;
 // });
-
 // console.log(updated_arr);
+
 
 
 // //Filter method..
@@ -51,6 +51,7 @@
 
 
 
+
 //Trying Every and Some function.
 // let num=[1,2,3,4];
 // console.log(num.every((el)=>{
@@ -63,12 +64,14 @@
 
 
 
+
 // //Reduce function----
 // let arr=[1,2,3,4,5];
 // let reduced_arr=arr.reduce((res,ele)=>{
 //     return res+ele;
 // });
 // console.log(reduced_arr);
+
 
 
 
@@ -80,6 +83,7 @@
 //     }
 // });
 // console.log(maxi);
+
 
 
 // // Check whether all the elements in the array is a multiple of 10 or not.
@@ -95,14 +99,18 @@
 // }
 
 
+
 //Create a function to find a minimum number in the array.
-let num=[-1,0,1,2,3,4,5,6,7,8];
-let min=num.reduce((res,ele)=>{
-    if(res>ele){
-        return ele;
-    }
-    else{
-        return res; 
-    }
-});
-console.log(min);
+// let num=[-1,0,1,2,3,4,5,6,7,8];
+// let min=num.reduce((res,ele)=>{
+//     if(res>ele){
+//         return ele;
+//     }
+//     else{
+//         return res; 
+//     }
+// });
+// console.log(min);
+
+
+
