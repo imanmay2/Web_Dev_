@@ -6,6 +6,7 @@
 
 
 
+
 // //creating an array with objects.
 // let arr1=[
 //     {
@@ -18,11 +19,14 @@
 // ];
 
 
+
+
 // arr1.forEach(
 //     function(student){
 //         console.log(`${student.marks}`);
 //     }
 // )
+
 
 
 // //using the map function.
