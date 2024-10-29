@@ -134,3 +134,17 @@ function min(...arr){
     });
     console.log("Minimum value is : ",min_);
 }
+
+
+//Destructuring.
+let name=["Tony","Stark","Manmay","Anwesha"];
+let [winner,runner_up,...others]=name;
+
+
+//Destructing in objects.
+let student={
+    username:"imanmay2",
+    passwd:"abcd",
+    age:20
+}
+let {username,passwd,...other}=student;
