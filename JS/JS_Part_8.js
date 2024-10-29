@@ -113,4 +113,24 @@
 // console.log(min);
 
 
+// rest concept...
+//Finding sum using rest concept.
+function sum(msg,...arr){
+    console.log(msg);
+    for(let i=0;i<arr.length;i++){
+        return arr.reduce((res,ele)=>res+ele);
+    }
+}
 
+
+function min(...arr){
+    let min_=arr.reduce((res,ele)=>{
+        if(res>ele){
+            return ele;
+        }
+        else{
+            return res;
+        }
+    });
+    console.log("Minimum value is : ",min_);
+}
