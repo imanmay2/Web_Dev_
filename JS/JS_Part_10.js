@@ -6,8 +6,10 @@ function hello(){
     console.log("Hello");
 };
 for(let btn of btns){
-    btn.onclick=hello;
-    btn.onmouseover=function(){
-        console.log("Hello mouse!");
-    }
+    btn.addEventListener("click",function(){
+        console.log("Button was clicked! ");
+    });
+    btn.addEventListener("dblclick",function(){
+        console.log("Button was double clicked! ");
+    });
 }
