@@ -7,7 +7,7 @@ function hello(){
 };
 for(let btn of btns){
     btn.onclick=hello;
-    btn.onmouseenter=function(){
+    btn.onmouseover=function(){
         console.log("Hello mouse!");
     }
 }
