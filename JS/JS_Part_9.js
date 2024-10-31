@@ -24,15 +24,17 @@
 
 
 
-//Using ClassList.
-let div_=document.querySelector("div");
-div_.setAttribute("class","my_Class");
-console.log(div_.classList);
-div_.classList.add("class1");
-div_.classList.add("class2");
-console.log(div_.classList);
-div_.classList.remove("class1");
-console.log(div_.classList);
-console.log(div_.classList.contains("class2"));
-div_.classList.toggle("class2");
-console.log(div_.classList);
+// //Using ClassList.
+// let div_=document.querySelector("div");
+// div_.setAttribute("class","my_Class");
+// console.log(div_.classList);
+// div_.classList.add("class1");
+// div_.classList.add("class2");
+// console.log(div_.classList);
+// div_.classList.remove("class1");
+// console.log(div_.classList);
+// console.log(div_.classList.contains("class2"));
+// div_.classList.toggle("class2");
+// console.log(div_.classList);
+
+
