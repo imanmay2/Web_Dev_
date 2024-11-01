@@ -19,7 +19,6 @@
 btns=document.querySelectorAll("button");
 for(let btn of btns){
     btn.addEventListener("click",function(){
-        btn.style.backgroundColor="blue";
-        console.log("hello");
+        this.style.backgroundColor="blue";
     });
 }
