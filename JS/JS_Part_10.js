@@ -43,12 +43,33 @@
 
 
 //Form events.
+// let form=document.querySelector("form");
+// form.addEventListener("submit",function(event){
+//     event.preventDefault();   // stays in the same page.
+//     console.dir(this);
+//     let user=this.elements[0];
+//     let pass=this.elements[1];
+//     console.log(`${user.value} is the username ${pass.value} is the password.`);
+//     console.log("Form Submitted");
+// });
+
+
+//More Events : -- Change and Input Events.
 let form=document.querySelector("form");
 form.addEventListener("submit",function(event){
-    event.preventDefault();   // stays in the same page.
-    console.dir(this);
-    let user=this.elements[0];
-    let pass=this.elements[1];
-    console.log(`${user.value} is the username ${pass.value} is the password.`);
+    event.preventDefault();
+    
     console.log("Form Submitted");
+});
+
+let user=document.querySelector("#user");
+user.addEventListener("change",function(){
+    console.log("Change");
+    console.log(user.value);
+});
+
+let user_=document.querySelector("#user");
+user_.addEventListener("input",function(){
+    console.log("Input");
+    console.log(user_.value);
 });
