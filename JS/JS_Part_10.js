@@ -24,19 +24,31 @@
 // }
 
 
-//keyboard events.
-let inp=document.querySelector("input");
-inp.addEventListener("keydown",function(event){
-    if(event.key=="ArrowUp"){
-        console.log("Arrow Up key is pressed!");
-    }
-    else if(event.key=="ArrowDown"){
-        console.log("Arrow Down key is pressed!");
-    }
-    else if(event.key=="ArrowLeft"){
-        console.log("Arrow Left key is pressed");
-    }
-    else if(event.key=="ArrowRight"){
-        console.log("Arrow Right key is pressed");
-    }
+// //keyboard events.
+// let inp=document.querySelector("input");
+// inp.addEventListener("keydown",function(event){
+//     if(event.key=="ArrowUp"){
+//         console.log("Arrow Up key is pressed!");
+//     }
+//     else if(event.key=="ArrowDown"){
+//         console.log("Arrow Down key is pressed!");
+//     }
+//     else if(event.key=="ArrowLeft"){
+//         console.log("Arrow Left key is pressed");
+//     }
+//     else if(event.key=="ArrowRight"){
+//         console.log("Arrow Right key is pressed");
+//     }
+// });
+
+
+//Form events.
+let form=document.querySelector("form");
+form.addEventListener("submit",function(event){
+    event.preventDefault();   // stays in the same page.
+    console.dir(this);
+    let user=this.elements[0];
+    let pass=this.elements[1];
+    console.log(`${user.value} is the username ${pass.value} is the password.`);
+    console.log("Form Submitted");
 });
