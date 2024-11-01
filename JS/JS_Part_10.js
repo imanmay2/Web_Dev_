@@ -15,10 +15,28 @@
 // }
 
 
-//use of this function.
-btns=document.querySelectorAll("button");
-for(let btn of btns){
-    btn.addEventListener("click",function(){
-        this.style.backgroundColor="blue";
-    });
-}
+// //use of this function.
+// btns=document.querySelectorAll("button");
+// for(let btn of btns){
+//     btn.addEventListener("click",function(){
+//         this.style.backgroundColor="blue";
+//     });
+// }
+
+
+//keyboard events.
+let inp=document.querySelector("input");
+inp.addEventListener("keydown",function(event){
+    if(event.key=="ArrowUp"){
+        console.log("Arrow Up key is pressed!");
+    }
+    else if(event.key=="ArrowDown"){
+        console.log("Arrow Down key is pressed!");
+    }
+    else if(event.key=="ArrowLeft"){
+        console.log("Arrow Left key is pressed");
+    }
+    else if(event.key=="ArrowRight"){
+        console.log("Arrow Right key is pressed");
+    }
+});
