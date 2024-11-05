@@ -12,7 +12,12 @@ function addTask(){
     li.appendChild(del);
     del.innerText="DELETE";
     del.classList.add("delete");
-    
+    del.addEventListener("click",delete_);
 
+}
+
+
+function delete_(){
+    console.log("Deleted"); 
 }
 btn.addEventListener("click",addTask);
