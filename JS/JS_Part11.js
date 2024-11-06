@@ -82,10 +82,17 @@ function saveToDB(data){
     });
 }
 
-let request=saveToDB("Apna College");
+let request=saveToDB("Data1");
 request.then(()=>{
-    console.log("Successfully Added");
-    console.log(request);
+    console.log("Data1 saved!");
+    return saveToDB("Data2");
+})
+.then(()=>{
+    console.log("Data2 saved!");
+    return saveToDB("Data3");
+})
+.then(()=>{
+    console.log("Data3 saved!");
 })
 .catch(()=>{
     console.log("Failed to Add!");
