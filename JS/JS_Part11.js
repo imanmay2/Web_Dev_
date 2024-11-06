@@ -70,31 +70,37 @@
 // });
 
 
-function saveToDB(data){
-    return new Promise((resolve,reject)=>{
-        let internetSpeed=Math.floor(Math.random()*10)+1;
-        if(internetSpeed>4){
-            resolve("Success ! ");
-        }
-        else{
-            reject("Failed ! ");
-        }
-    });
-}
+// function saveDB(data){
+//     return new Promise((resolve,reject)=>{
+//         let internetSpeed=Math.floor(Math.random()*10)+1;
+//         if(internetSpeed>4){
+//             resolve("Success: Data was saved!");
+//         }
+//         else{
+//             reject("Failed: Data Entry Failed!");
+//         }
+//     });
+// }
 
-let request=saveToDB("Data1");
-request.then(()=>{
-    console.log("Data1 saved!");
-    return saveToDB("Data2");
-})
-.then(()=>{
-    console.log("Data2 saved!");
-    return saveToDB("Data3");
-})
-.then(()=>{
-    console.log("Data3 saved!");
-})
-.catch(()=>{
-    console.log("Failed to Add!");
-    console.log(request);
-});
+// saveDB("Data1")
+// .then((result)=>{
+//     console.log("Data1 saved!");
+//     console.log(result);
+//     return saveDB("Data2");
+// })
+// .then((result)=>{
+//     console.log("Data2 saved!");
+//     console.log(result);
+//     return saveDB("Data3");
+// })
+// .then((result)=>{
+//     console.log("Data3 saved!");
+//     console.log(result);
+// })
+// .catch((error)=>{
+//     console.log(error);
+// });
+
+
+
+//
