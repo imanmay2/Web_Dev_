@@ -70,14 +70,24 @@
 // });
 
 
-function savetoDb(data){
+function saveToDB(data){
     return new Promise((resolve,reject)=>{
         let internetSpeed=Math.floor(Math.random()*10)+1;
         if(internetSpeed>4){
-            resolve("Success!");
+            resolve("Success ! ");
         }
         else{
-            reject("Failed!");
+            reject("Failed ! ");
         }
     });
 }
+
+let request=saveToDB("Apna College");
+request.then(()=>{
+    console.log("Successfully Added");
+    console.log(request);
+})
+.catch(()=>{
+    console.log("Failed to Add!");
+    console.log(request);
+});
