@@ -21,21 +21,41 @@
 // }
 
 
-//Using Await keyword.
-function getNum(){
+// //Using Await keyword.
+// function getNum(){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             console.log(Math.floor(Math.random()*10)+1);
+//             resolve("Resolved");
+//         },1000);
+//     });
+// }
+
+
+
+// async function demo(){
+//     await getNum();
+//     await getNum();
+//     await getNum();
+//     await getNum();
+//     getNum();
+// }
+
+
+
+//Using Await function , in Color Changer.
+let h1=document.querySelector("h1");
+function colorChange(color,delay){
     return new Promise((resolve,reject)=>{
         setTimeout(()=>{
-            console.log(Math.floor(Math.random()*10)+1);
-            resolve("Resolved");
+            h1.style.color=color;
+            resolve("Color changed!!");
         },1000);
     });
 }
 
-async function demo(){
-    await getNum();
-    await getNum();
-    await getNum();
-    await getNum();
-    getNum();
-
+let changeColor=async ()=>{
+    await colorChange("red",1000);
+    await colorChange("green",1000);
+    colorChange("blue",1000);
 }
