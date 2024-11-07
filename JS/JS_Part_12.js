@@ -131,7 +131,6 @@ async function getFact(){
     }catch(err){
         console.log("Error is : ",err);
     }
-
 }
 console.log("I am happy");
 getFact();
