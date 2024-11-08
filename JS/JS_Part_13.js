@@ -1,19 +1,21 @@
-//Use of axios instead of fetch.
-let btn=document.querySelector("button");
-btn.addEventListener("click",()=>{
-    let fact=await getFacts();
-    fact;
-});
-
+//Using axios instead of fetch the API.
 let url="https://catfact.ninja/fact";
-async function getFacts(){
+let btn=document.querySelector("button");
+btn.addEventListener("click",async()=>{
+    let fact=await getFact();
+    console.log(fact);
+    let body_=document.querySelector("body");
+    let p=document.createElement("p");
+    body_.append(p);
+    p.innerText=fact;
+});
+async function getFact(){
     try{
         let res=await axios.get(url);
-        console.log(res.data.fact);
+        return res.data.fact;
     }catch(err){
-        console.log("Error is--",err);
+        // console.log("Error is - ",err);
+        return "404-No Fact Found."
+        
     }
 }
-
-getFacts();
-
