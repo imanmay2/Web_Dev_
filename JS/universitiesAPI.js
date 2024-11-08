@@ -6,17 +6,28 @@ btn.addEventListener("click",()=>{
 });
 
 
-url="http://universities.hipolabs.com/search?name=";
+
 async function getUniversityName(country){
+    url="http://universities.hipolabs.com/search?name=";
     let ul=document.querySelector("ul");
-    url=url+country;
-    let res=await axios.get(url);
-    arrays=res.data;
+    ul.innerHTML="";
+    let u=url+country;
+    // console.log(u);
+    let res=await axios.get(u);
+    let arrays=res.data;
     // console.log(arrays);
     for(let arr of arrays){
         let li=document.createElement("li");
         ul.appendChild(li);
-        li.innerText="University Name : "+arr.name+" "+arr["state-province"];
-        console.log(arr.name);
+        if(arr["state-province"]!=null){
+            li.innerText="University Name : "+arr.name+" "+arr["state-province"];
+        }
+        else{
+            li.innerText="University Name : "+arr.name;
+        }
+        // li.innerText="University Name : "+arr.name+" "+arr["state-province"];
+        // console.log(arr.name);
+        
     }
 }
+
