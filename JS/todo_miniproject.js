@@ -1,21 +1,19 @@
-let input_=document.querySelector("input");
-let btn=document.querySelector("button");
+let input=document.querySelector("input");
+let btn=document.querySelector(".add");
 let ul=document.querySelector("ul");
-function addTask(){
-    task_=input_.value;
-    input_.value="";
-    input_.setAttribute("placeholder","Enter Task");
-    li=document.createElement("li");
+btn.addEventListener("click",()=>{
+    let task=input.value;
+    input.value="";
+    input.setAttribute("placeholder","Enter your Task");
+    let li=document.createElement("li");
+    li.innerHTML=`${task}<Button class="delete">DELETE</Button>`;
     ul.appendChild(li);
-    li.append(task_);
-    let del=document.createElement("Button");
-    li.appendChild(del);
-    del.innerText="DELETE";
-    del.classList.add("delete");
-}
+});
 
 
-function delete_(){
-    console.log("Deleted"); 
-}
-btn.addEventListener("click",addTask);
+ul.addEventListener("click",(event)=>{
+    if(event.target.nodeName=="BUTTON"){
+        let item=event.target.parentElement;
+        item.remove();
+    }
+});
