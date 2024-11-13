@@ -8,7 +8,22 @@
 // console.log(process.argv);
 
 
-args=process.argv;
-for(let i=2;i<=args.length-1;i++){
-    console.log("Hello, Welcome "+args[i]);
-}
+// args=process.argv;
+// for(let i=2;i<=args.length-1;i++){
+//     console.log("Hello, Welcome "+args[i]);
+// }
+
+let sum=(a,b)=>(
+    a+b
+);
+
+let mul=(a,b)=>(
+    a*b
+);
+
+let obj={
+    sum:sum,
+    mul:mul
+};
+
+module.exports=obj;
