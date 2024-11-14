@@ -1,2 +1,2 @@
-let exportNum=require("./Fruits");
-console.log(exportNum);
+let fetchData=require("./Fruits");
+console.log(fetchData);
