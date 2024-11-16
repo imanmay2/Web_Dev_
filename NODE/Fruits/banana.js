@@ -1,4 +1,4 @@
-module.exports={
+export let banana={
     name:"Banana",
-    color:"yellow"
+    color:"Yellow"
 };

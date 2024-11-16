@@ -1,6 +1,5 @@
-const apple_=require("./apple");
-const banana_=require("./banana");
-const orange_=require("./orange");
+import {apple} from "./apple.js";
+import {banana} from "./banana.js";
+import { orange } from "./orange.js";
 
-let fruits=[apple_,banana_,orange_];
-module.exports=fruits;
+export let list=[apple,banana,orange];
