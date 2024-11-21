@@ -34,10 +34,10 @@ app.get("/search",(req,res)=>{
     }
 });
 
-// app.get("/:username/:id",(req,res)=>{
-//     let {username}=req.params;
-//     res.send(`<h1>Hey You connected with ${username}</h1>`);
-// })
+app.get("/:username/:id",(req,res)=>{
+    let {username}=req.params;
+    res.send(`<h1>Hey You connected with ${username}</h1>`);
+})
 
 
 
