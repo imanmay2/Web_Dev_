@@ -1,0 +1,16 @@
+<%- include("include_/intro.ejs"); %>
+<body>
+    <h1>Hey, You searched for <%= data.name %> </h1>
+    <script src="/script.js"></script>
+
+    <% for(let d of data.posts) {  %>
+        <img src=<%=d.image %> alt="Some image"> Likes : <%= d.likes %> &nbsp;&nbsp;&nbsp;&nbsp;  Comments  : <%= d.comments %>
+        <hr> 
+
+    <% } %>
+
+    
+
+    <%- include("include_/footer.ejs"); %>
+</body>
+</html>
