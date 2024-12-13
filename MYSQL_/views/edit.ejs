@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPDATE INFORMATION.</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>Update your Information.</h1>
+    UserId : <% UserId %>
+    <form action="/users/<%=UserId%>" method="POST">
+        Your Username : <input type="text" name="username"> <br><br>
+        Your Email : <input type="text" name="email"> <br><br>
+        Your Password: <input type="password" name="password"> <br><br>
+        <button type="Submit">Submit</button>
+    </form>
+</body>
+</html>
