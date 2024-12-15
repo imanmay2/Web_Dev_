@@ -11,18 +11,10 @@ app.use(express.static(path.join(__dirname, "/public")))
 
 // let id=0;
 
-
 let Chat=require("./models/chat.cjs");    //imports the model from another file-->chat.cjs
-
-
-
-
 async function main(){
     await mongoose.connect('mongodb://127.0.0.1:27017/whatsapp');
 }
-
-
-
 
 app.listen(port,()=>{
     console.log("App is listening to : ",port);
@@ -33,7 +25,6 @@ app.listen(port,()=>{
     })
 });
 
-
 //fetching chats from Database.
 app.get("/chats",(req,res)=>{
     Chat.find().then((result_)=>{
@@ -41,7 +32,6 @@ app.get("/chats",(req,res)=>{
         res.render("home.ejs",{lists:result_});
     })
 });
-
 
 
 //Add Chat --functionality.
@@ -62,6 +52,7 @@ app.post("/chats/add/db",(req,res)=>{
 });
 
 
+
 //EDIT---->functionality
 app.get("/chats/:id/edit",async (req,res)=>{
     let {id}=req.params;
@@ -69,6 +60,7 @@ app.get("/chats/:id/edit",async (req,res)=>{
     console.log(info);
     res.render("edit.ejs",{id,info});
 });
+
 
 app.post("/chats/:id", async(req,res)=>{
     let {id}=req.params;
