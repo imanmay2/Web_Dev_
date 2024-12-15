@@ -39,6 +39,8 @@ app.get("/chats/add",(req,res)=>{
     res.render("add.ejs");
 });
 
+
+
 app.post("/chats/add/db",(req,res)=>{
     let {from_,to_,msg_}=req.body;
     let info_=new Chat({
