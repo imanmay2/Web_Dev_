@@ -9,7 +9,6 @@ app.use(express.urlencoded({ extended: true }));    //handling post request.
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "/public")))
 
-// let id=0;
 
 let Chat=require("./models/chat.cjs");    //imports the model from another file-->chat.cjs
 async function main(){
@@ -25,6 +24,7 @@ app.listen(port,()=>{
         console.log(err);
     })
 });
+
 
 //fetching chats from Database.
 app.get("/chats",(req,res)=>{
