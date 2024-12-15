@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: true }));    //handling post request.
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "/public")))
 
-
+// let id=0;
 
 
 let Chat=require("./models/chat.cjs");    //imports the model from another file-->chat.cjs
@@ -24,7 +24,6 @@ async function main(){
 
 
 
-
 app.listen(port,()=>{
     console.log("App is listening to : ",port);
     main().then((result)=>{
@@ -35,6 +34,7 @@ app.listen(port,()=>{
 });
 
 
+//fetching chats from Database.
 app.get("/chats",(req,res)=>{
     Chat.find().then((result_)=>{
         // console.log(result_);
@@ -44,17 +44,43 @@ app.get("/chats",(req,res)=>{
 
 
 
+//Add Chat --functionality.
+app.get("/chats/add",(req,res)=>{
+    res.render("add.ejs");
+});
 
-// const user1=new Chat({
-//     from:"Shraddha",
-//     to:"Shreya",
-//     msg:"Hey, I am Shraddha ,How are you?",
-//     date: new Date()
-// });
+app.post("/chats/add/db",(req,res)=>{
+    let {from_,to_,msg_}=req.body;
+    let info_=new Chat({
+        from:from_,
+        to:to_,
+        msg:msg_,
+        date: new Date()
+    })
+    info_.save();
+    res.redirect("/chats");
+});
 
 
+//EDIT---->functionality
+app.get("/chats/:id/edit",async (req,res)=>{
+    let {id}=req.params;
+    let info=await Chat.findById(id);
+    console.log(info);
+    res.render("edit.ejs",{id,info});
+});
+
+app.post("/chats/:id", async(req,res)=>{
+    let {id}=req.params;
+    let {msg_}=req.body;
+     await Chat.findByIdAndUpdate(id,{msg:msg_},{runValidators:true},{new:true});
+    res.redirect("/chats");
+});
 
 
-// user1.save().then((result_)=>{
-//     console.log(result_);
-// });
+//DELETE ----> functionality...
+app.post("/chats/:id/delete",async (req,res)=>{
+    let {id}=req.params;
+    await Chat.deleteOne({_id:id},{runValidators:true},{new:true});
+    res.redirect("/chats");
+});

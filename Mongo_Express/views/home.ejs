@@ -4,21 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini Chats</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <h1>Chats ! </h1>
-    <button>New Chat</button>
+    <form action="/chats/add" method="GET">
+        <button>New Chat</button>
+    </form>
     <% for(data of lists){ %>
         <br>
         <div class="outer">
             From : <i><%= data.from; %> </i> <br>
             <div class="inner">
-                Received bu : <%= data.msg %> <br>
-                <br>
-                <button>Edit</button> &nbsp;&nbsp;&nbsp;&nbsp; <button>Delete</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;<%= data.msg %> <br>
+                <form action="/chats/<%= data._id %>/edit" method="GET">
+                    &nbsp;&nbsp;<button>Edit</button>
+                </form>
 
-            </div>
+                <form action="/chats/<%= data._id %>/delete" method="POST">
+                    &nbsp;&nbsp;<button>Delete</button></form></div>
+                <br>
+                Received by : <%= data.to %> <br>
+                <hr>
+                <%= data.date.toString().split(" ")[4].split(":")[0]+":"+data.date.toString().split(" ")[4].split(":")[1] %>
+                <br>
+                <% let str_=data.date.toString().split(" "); %>
+                <%= str_[0]+" "+str_[1]+" "+str_[2]+" "+str_[3] %>
         </div>
+        <br>
    <% } %>
 </body>
 </html>
