@@ -16,6 +16,7 @@ async function main(){
     await mongoose.connect('mongodb://127.0.0.1:27017/whatsapp');
 }
 
+
 app.listen(port,()=>{
     console.log("App is listening to : ",port);
     main().then((result)=>{
