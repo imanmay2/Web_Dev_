@@ -1,0 +1,28 @@
+.btn{
+    width: 300px;
+    height: 200px;
+    display: inline-block;
+    margin-top: 0px;
+    margin-left:0px;
+    color: yellow;
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(0deg);
+    /* display: none; */
+    transition: background-color 2s ease-in-out,margin-top 2s ease-in-out,transform 2s ease-in-out,margin-left 2s ease-in-out;
+}
+
+
+.btn:hover {
+    /*  */
+    margin-top: 400px;
+    margin-left:400px;
+    background-color: red;
+     /* transform: rotate(360deg); */
+    /* transform:scale(2);  */
+    transform: skew(-90deg);
+    transform:translateX(50px);
+}
