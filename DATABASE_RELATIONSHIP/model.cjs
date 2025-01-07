@@ -45,21 +45,48 @@ async function main() {
 
 // addUser();
 
-const orderSchema=new mongoose.Schema({
-    item:String,
-    price:Number
+// const orderSchema=new mongoose.Schema({
+//     item:String,
+//     price:Number
+// });
+
+
+const customerSchema=new mongoose.Schema({
+    name:String,
+    orders:[
+        {
+            type:Schema.Types.ObjectId,
+            ref:"Order"
+        }
+    ]
 });
 
-
-const Order=mongoose.model("Order",orderSchema);
-let addOrders=async()=>{
-    await Order.insertMany([
-        {item:"Samosa",price:12},
-        {item:"Chips",price:10}
-    ]).then((res)=>{
+const Customer=mongoose.model("Customer",customerSchema);
+const addCustomer=async()=>{
+    let cust1=new Customer({
+        name:"Rahul"
+    });
+    let order1=await Order.findOne({item:"Chips"});
+    cust1.orders.push(order1);
+    let order2=await Order.findOne({item:"Samosa"});
+    cust1.orders.push(order2);
+    await cust1.save().then((res)=>{
         console.log(res);
     });
 };
 
 
-addOrders();
+// const Order=mongoose.model("Order",orderSchema);
+// let addOrders=async()=>{
+//     await Order.insertMany([
+//         {item:"Samosa",price:12},
+//         {item:"Chips",price:10}
+//     ]).then((res)=>{
+//         console.log(res);
+//     });
+// };
+
+
+// addOrders();
+
+addCustomer();
