@@ -43,7 +43,6 @@ let Post=mongoose.model("Post",postSchema);
 let addpost=async()=>{
     let savePost=new Post({
         content:"Hello",
-        
     });
     let user_=await User.findOne({username:"ianwesha"});
     savePost.user.push(user_);
