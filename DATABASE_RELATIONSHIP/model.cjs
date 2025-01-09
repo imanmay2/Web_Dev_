@@ -38,7 +38,6 @@ let addOrders = async () => {
         item: "Chocolate",
         price: 50
     }]);
-
     console.log(res_);
 }
 
