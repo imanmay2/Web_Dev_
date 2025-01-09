@@ -1,92 +1,69 @@
+
 const mongoose = require('mongoose');
+const { Schema } = mongoose;
 
 main().catch(err => console.log(err));
 
-
 async function main() {
-    await mongoose.connect('mongodb://127.0.0.1:27017/relations').then(()=>{
-        console.log("Connection Successful.");
-    });
+    const result_ = await mongoose.connect('mongodb://127.0.0.1:27017/relations');
+    if (result_) {
+        console.log("DATABASE CONNECTION SUCCESSFUL.");
+    }
 }
 
-
-// const userSchema=new mongoose.Schema({
-//     name:String,
-//     address:[
-//         {
-//             _id:false,
-//             location:String,
-//             city:String
-//         }
-//     ]
-// });
-
-
-// const User=mongoose.model("User",userSchema);
-
-// const addUser=async()=>{
-//     let user1=new User({
-//         name:"Manmay",
-//         address:[
-//             {
-//                 location:"Manibag",
-//                 city:"Kaliyaganj"
-//             }
-//         ]
-//     })
-//     user1.address.push({
-//         location:"P32",city:"London"
-//     });
-
-//     await user1.save().then((res)=>{
-//         console.log(res);
-//     });
-// }
-
-// addUser();
-
-// const orderSchema=new mongoose.Schema({
-//     item:String,
-//     price:Number
-// });
-
-
-const customerSchema=new mongoose.Schema({
-    name:String,
-    orders:[
-        {
-            type:Schema.Types.ObjectId,
-            ref:"Order"
-        }
-    ]
+const orderSchema = new Schema({
+    item: String,
+    price: Number
 });
 
-const Customer=mongoose.model("Customer",customerSchema);
-const addCustomer=async()=>{
-    let cust1=new Customer({
+const custSchema=new Schema({
+    name:String,
+    orders:[{
+        type:Schema.Types.ObjectId,
+        ref:"Order"
+    }]
+});
+
+
+const Order = mongoose.model("Order", orderSchema);
+let addOrders = async () => {
+    let res_=await Order.insertMany([{
+        item: "Chips",
+        price: 10
+    },
+    {
+        item: "Samosa",
+        price: 12
+    }, {
+        item: "Chocolate",
+        price: 50
+    }]);
+
+    console.log(res_);
+}
+
+const Customer=mongoose.model("Customer",custSchema);
+let addCustomers=async()=>{
+    let cust_1=new Customer({
         name:"Rahul"
     });
     let order1=await Order.findOne({item:"Chips"});
-    cust1.orders.push(order1);
-    let order2=await Order.findOne({item:"Samosa"});
-    cust1.orders.push(order2);
-    await cust1.save().then((res)=>{
-        console.log(res);
-    });
-};
+    let order2=await Order.findOne({items:"Chocolate"});
+    console.log(order2);
+    // cust_1.orders.push(order1);
+    // cust_1.orders.push(order2);
+    // let res__=await cust_1.save();
+    // console.log(res__);
+}
 
-
-// const Order=mongoose.model("Order",orderSchema);
-// let addOrders=async()=>{
-//     await Order.insertMany([
-//         {item:"Samosa",price:12},
-//         {item:"Chips",price:10}
-//     ]).then((res)=>{
-//         console.log(res);
-//     });
-// };
-
+// addCustomers();
 
 // addOrders();
 
-addCustomer();
+
+let customers=async()=>{
+    let res=await Customer.findOne({name:"Rahul"}).populate("orders");
+    console.log(res);
+};
+addCustomers();
+customers();
