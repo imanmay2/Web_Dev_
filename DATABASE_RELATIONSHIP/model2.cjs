@@ -16,6 +16,7 @@ const userSchema=new Schema({
     email:String
 });
 
+
 const postSchema=new Schema({
     content:String,
     likes:Number,
@@ -26,28 +27,35 @@ const postSchema=new Schema({
 });
 
 
-let User=mongoose.model("User",userSchema);
+const User=mongoose.model("User",userSchema);
 let addUser=async()=>{
-    let res=await User.insertMany([{
-        username:"imanmay2",
-        email:"imanmay2@gmail.com"
-    },{
-        username:"ianwesha",
-        email:"anwesha.jana012@gmail.com"
-    }]);
+    let res=await User.insertMany([
+        {username:"imanmay2",email:"imanmay@gmail.com"},
+        {username:"ianwesha",email:"ianwesha@gmail.com"}
+    ]);
     console.log(res);
 }
 
 // addUser();
-let Post=mongoose.model("Post",postSchema);
-let addpost=async()=>{
-    let savePost=new Post({
-        content:"Hello",
+
+
+const Post=mongoose.model("Post",postSchema);
+let addPost=async()=>{
+    let post1=new Post({
+        content:"Hello, I am Anwesha Jana!",
+        likes:24,
     });
     let user_=await User.findOne({username:"ianwesha"});
-    savePost.user.push(user_);
-    let res_=await savePost.save();
+    post1.user=user_;
+    console.log(post1);
+    let res_=await post1.save();
     console.log(res_);
 }
 
-addpost();
+// addPost();
+
+let readPost=async()=>{
+    let res_=await Post.find().populate("user","username");
+    console.log(res_);
+}
+readPost();
