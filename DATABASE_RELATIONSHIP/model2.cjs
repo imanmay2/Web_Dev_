@@ -58,4 +58,24 @@ let readPost=async()=>{
     let res_=await Post.find().populate("user","username");
     console.log(res_);
 }
-readPost();
+// readPost();
+
+
+let create_=async()=>{
+    let user1=new User({
+        username:"ihello",
+        email:"ihello@gmail.com"
+    });
+
+    let post1=new Post({
+        content:"hello",
+        likes:"65"
+    });
+
+    post1.user=user1;
+    await user1.save();
+    let res=await post1.save();
+    console.log(res);
+}
+
+// create_();
