@@ -28,21 +28,26 @@ const postSchema=new Schema({
 });
 
 
+
 //Creating mongoose  middleware.
+// userSchema.pre("findOneAndDelete",async()=>{
+//     console.log("This is a pre middleware.");
+// });
 
-
-userSchema.pre("findOneAndDelete",async()=>{
-    console.log("This is a pre middleware.");
-});
-
-userSchema.post("findOneAndDelete",async()=>{
+userSchema.post("findOneAndDelete",async(user__)=>{
     console.log("This is a post middleware.");
+    // console.log(user);
+    let res_=await Post.deleteMany({user:user__._id});
+    console.log(res_);
 });
+
+
 
 const User=mongoose.model("User",userSchema);
+const Post=mongoose.model("Post",postSchema);
 let addUser=async()=>{
     let res=await User.insertMany([
-        {username:"imanmay2",email:"imanmay@gmail.com"},
+        // {username:"imanmay2",email:"imanmay@gmail.com"},
         {username:"ianwesha",email:"ianwesha@gmail.com"}
     ]);
     console.log(res);
@@ -51,7 +56,7 @@ let addUser=async()=>{
 // addUser();
 
 
-const Post=mongoose.model("Post",postSchema);
+
 let addPost=async()=>{
     let post1=new Post({
         content:"Hello, I am Anwesha Jana!",
@@ -59,7 +64,7 @@ let addPost=async()=>{
     });
     let user_=await User.findOne({username:"ianwesha"});
     post1.user=user_;
-    console.log(post1);
+    // console.log(post1);
     let res_=await post1.save();
     console.log(res_);
 }
@@ -89,17 +94,15 @@ let create_=async()=>{
     let res=await post1.save();
     console.log(res);
 }
-
 // create_();
 
 
+
+//DELETE User ----> Objective so that middleware will delete the Post information as well.
 
 const delUser=async(id_)=>{
     let res=await User.findByIdAndDelete(id_);
     console.log(res);
 }
 
-delUser('678140ef457bd7b58f103ded');
-
-
- 
+delUser('67835e208a42460bf64162b4');
