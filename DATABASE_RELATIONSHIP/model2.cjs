@@ -17,6 +17,7 @@ const userSchema=new Schema({
 });
 
 
+
 const postSchema=new Schema({
     content:String,
     likes:Number,
@@ -26,6 +27,17 @@ const postSchema=new Schema({
     }
 });
 
+
+//Creating mongoose  middleware.
+
+
+userSchema.pre("findOneAndDelete",async()=>{
+    console.log("This is a pre middleware.");
+});
+
+userSchema.post("findOneAndDelete",async()=>{
+    console.log("This is a post middleware.");
+});
 
 const User=mongoose.model("User",userSchema);
 let addUser=async()=>{
@@ -79,3 +91,15 @@ let create_=async()=>{
 }
 
 // create_();
+
+
+
+const delUser=async(id_)=>{
+    let res=await User.findByIdAndDelete(id_);
+    console.log(res);
+}
+
+delUser('678140ef457bd7b58f103ded');
+
+
+ 
