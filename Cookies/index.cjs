@@ -3,9 +3,11 @@ const app=express();
 let port=3030;
 const cookieParser=require("cookie-parser");
 
+
 app.listen(port,()=>{
     console.log("Server is listening to ",port);
 });
+
 
 app.use(cookieParser("secretcode"));
 app.get("/getcookies",(req,res)=>{
@@ -19,7 +21,6 @@ app.get("/accesscookies",(req,res)=>{
     console.dir(req.cookies);
     res.send("Cookies are fetched.");
 })
-
 
 
 //Signed Cookie.
