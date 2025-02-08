@@ -18,6 +18,7 @@ let sessionObj={
 app.use(session(sessionObj));
 app.use(flash());
 
+
 app.listen(port,()=>{
     console.log("App is listening to ",port);
 });
@@ -37,7 +38,6 @@ app.get("/reqcount",(req,res)=>{
     }
     res.send(`Count is : ${req.session.count}`);
 });
-
 
 
 //Storing and Using Information/Data.
