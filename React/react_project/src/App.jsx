@@ -1,16 +1,11 @@
 import "./App.css";
-import { Title } from "./Title.jsx";
-
-function App() {
-  let name="js";
+import {Products} from "./Products.jsx"
+export default function App(){
+  let user="Manmay"
   return (
-    <div>
-      <h1>Welcome to React{name.toUpperCase()}</h1>
-      <Title />
-      <Title />
-      <Title /></div>
+    <>
+    <h1>Welcome {user}</h1>
+    <Products/>
+      </>
   );
 }
-
-
-export default App

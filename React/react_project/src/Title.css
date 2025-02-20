@@ -1,6 +1,8 @@
 .Title{
-    border:1px solid White;
+    border: 5px solid gold;
     border-radius: 12px;
-    margin: 5px 5px 5px 5px;
-    padding: 5px 5px 5px 5px;
+    margin-left: 30px;
+    padding: 10px 10px 10px 10px;
+    display : inline-block;
+    height: 200px;
 }
