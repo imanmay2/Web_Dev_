@@ -1,8 +1,20 @@
 .Title{
-    border: 5px solid gold;
+    border: 2px solid gold;
     border-radius: 12px;
     margin-left: 30px;
     padding: 10px 10px 10px 10px;
     display : inline-block;
     height: 200px;
 }
+
+/* .gold{
+    background-color: gold;
+} */
+
+#discount{
+    text-decoration: line-through;
+}
+
+/* .sky{
+    background-color: aquamarine;
+} */

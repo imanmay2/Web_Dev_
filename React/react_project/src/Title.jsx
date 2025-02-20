@@ -1,12 +1,13 @@
 import "./Title.css";
 
-function Title({item,price=1,description}){
+function Title({item,Discount_price,Actual_price,description}){
+    description=description.map((d)=><li>{d}</li>);
     return (
         <div className="Title">
-            <p>Item_Name: {item}</p>
-            <p>Item_Price: {price}</p>
-            <p>Description : {description}</p>
-            {price>=30000 ? <p>Discount : 5%</p> : null}
+            <div className="sky">
+            <p>{item}</p>
+            <p>Description : {description}</p></div>
+            <p className="gold"><font id="discount">Rs.{Discount_price}</font> &nbsp; Rs.{Actual_price}</p>
         </div>
     );
 }

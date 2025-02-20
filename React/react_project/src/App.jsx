@@ -1,10 +1,10 @@
 import "./App.css";
 import {Products} from "./Products.jsx"
 export default function App(){
-  let user="Manmay"
+  let user="Blockbuster Deals on Computers and Accessesories"
   return (
     <>
-    <h1>Welcome {user}</h1>
+    <p><b>{user}</b></p>
     <Products/>
       </>
   );
