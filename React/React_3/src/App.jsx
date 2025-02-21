@@ -1,15 +1,15 @@
 import './App.css'
+import { useState } from 'react';
+import {Like} from "./Like.jsx";
 
-let submit=(event)=>{
-  event.preventDefault();
-  console.log("Form Submitted");
-}
+
 
 export default function App(){
+
+  
   return (
-    <form onSubmit={submit}>
-      <input type="text" />
-      <button>Submit</button>
-    </form>
+    <div>
+      <Like/>
+    </div>
   );
 }
