@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-
 function LudoBoard(){
     let [moves,setMoves]=useState({blue:0,green:0,yellow:0,red:0});
     let updateBlue=()=>{
