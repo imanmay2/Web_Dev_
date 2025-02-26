@@ -18,7 +18,7 @@ function Todo() {
         setArr((prev) => {
             return ([...prev, { Task: task, id: uuidv4() }]);
         });
-        console.log(arr);
+        // console.log(arr);
     }
 
 
@@ -28,21 +28,7 @@ function Todo() {
             return arr.filter((prev)=>prev.id!=id_);
         });
 
-        console.log(arr);
-    //    console.log("This has to be deleted");
-    //    console.log(arr);
-    // let newArr=[];
-    // let ct=0;
-    // for(let i=0;i<arr.length;i++){
-    //     if(arr[i].id!=id_){
-    //         newArr[ct].Task=arr[i].Task;
-    //         newArr[ct].id=arr[i].id;
-    //     }
-    // }
-
-
-    // console.log(newArr);
-
+        // console.log(arr);
     })
 
 
