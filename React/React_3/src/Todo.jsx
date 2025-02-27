@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
 
-function Todo() {
 
+function Todo() {
     let [arr, setArr] = useState([{ Task: "Sample-task", id: uuidv4() }, { Task: "Programming", id: uuidv4() }]);
     let [task, setTask] = useState("");
 
@@ -18,19 +18,57 @@ function Todo() {
         setArr((prev) => {
             return ([...prev, { Task: task, id: uuidv4() }]);
         });
-        // console.log(arr);
     }
 
 
-    let deleteTask=((id_)=>{
 
-        setArr((prev)=>{
-            return arr.filter((prev)=>prev.id!=id_);
+    let deleteTask = ((id_) => {
+        setArr((prev) => {
+            return arr.filter((prev) => prev.id != id_);
         });
-
         // console.log(arr);
     })
 
+    // let updateAll = () => {
+    //     setArr((prev) => {
+    //         prev.map((todo) => {
+    //             return {
+    //                 ...todo, Task: todo.Task.toUpperCase()
+    //             };
+    //         });
+    //     });
+    // };
+
+    let updateAll = () => {
+        let newArr = arr.map((prev) => {
+            return {
+                ...prev, Task: prev.Task.toUpperCase()
+            };
+        });
+        console.log(newArr);
+        setArr(newArr);
+    }
+
+    let updateOne = (_id) => {
+        let newArr = arr.map((prev) => {
+            if (prev.id == _id) {
+                return {
+                    ...prev, Task: prev.Task.toUpperCase()
+
+                }
+            } else {
+                return prev;
+            }
+
+
+        });
+        setArr(newArr);
+    }
+
+
+    let updateDone=(_id)=>{
+         
+    }
 
     return (
         <div>
@@ -40,13 +78,15 @@ function Todo() {
             <ul>
                 {arr.map((list) => {
                     return (
-                            <li key={list.id}>{list.Task}&nbsp;
-                            &nbsp; <button onClick={()=>deleteTask(list.id)}>Delete</button></li>
+                        <li key={list.id}>{list.Task}&nbsp;
+                            &nbsp; <button onClick={() => deleteTask(list.id)}>Delete</button> &nbsp;&nbsp; <button onClick={() => updateOne(list.id)}>UpperCase</button> <button onClick={()=>updateDone(list.id)}>Mark as Done</button></li>
+
                     );
                 })}
+                <button onClick={updateAll}>UpperCase All</button>
+
             </ul>
         </div>
     );
 }
-
 export { Todo };
