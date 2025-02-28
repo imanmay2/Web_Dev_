@@ -33,7 +33,7 @@ function Todo() {
     let updateAll = () => {
         let newArr = arr.map((prev) => {
             return {
-                ...prev, Task: prev.Task.toUpperCase()
+                ...prev, toggle:"True"
             };
         });
         console.log(newArr);
@@ -45,15 +45,11 @@ function Todo() {
             if (prev.id == _id) {
                 return {
                     ...prev, Task: prev.Task.toUpperCase()
-
                 }
             } else {
                 return prev;
             }
-
-
         });
-       
         setArr(newArr);
     }
 
@@ -62,13 +58,10 @@ function Todo() {
         console.log(_id);
         let newArr=arr.map((prev)=>{
             if(prev.toggle==="False" && prev.id===_id){
-                
                 return {
                     ...prev,toggle:"True",
-                    
                 }
             } else if(prev.id===_id && prev.toggle==="True"){
-                
                 return {
                     ...prev,toggle:"False",
                 }
@@ -96,8 +89,7 @@ function Todo() {
                     );
                 })}
                 <br /><br />
-                <button onClick={updateAll}>UpperCase All</button>
-
+                <button onClick={updateAll}>Mark All Done</button>
             </ul>
         </div>
     );
