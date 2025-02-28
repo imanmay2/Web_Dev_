@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
-
+import "./Todo.css";
 
 function Todo() {
-    let [arr, setArr] = useState([{ Task: "Sample-task", id: uuidv4() }, { Task: "Programming", id: uuidv4() }]);
+    let [arr, setArr] = useState([{ Task: "Sample-task", id: uuidv4() ,toggle:"False"}, { Task: "Programming", id: uuidv4(),toggle:"False" }]);
     let [task, setTask] = useState("");
+    let [toggle,setToggle]=useState("False");
 
     let trackChange = (event) => {
         setTask(() => {
@@ -16,10 +17,9 @@ function Todo() {
     let setChange = () => {
         // setArr([...arr, { Task: task, id: uuidv4() }]);
         setArr((prev) => {
-            return ([...prev, { Task: task, id: uuidv4() }]);
+            return ([...prev, { Task: task, id: uuidv4() ,toggle:"False"}]);
         });
     }
-
 
 
     let deleteTask = ((id_) => {
@@ -62,27 +62,50 @@ function Todo() {
 
 
         });
+       
         setArr(newArr);
     }
 
 
     let updateDone=(_id)=>{
-         
+        console.log(_id);
+        let newArr=arr.map((prev)=>{
+            if(prev.toggle==="False" && prev.id===_id){
+                
+                return {
+                    ...prev,toggle:"True",
+                    
+                }
+            } else if(prev.id===_id && prev.toggle==="True"){
+                
+                return {
+                    ...prev,toggle:"False",
+                }
+            } else if(prev.id!=_id){
+                return prev
+            }
+            
+        })
+        console.log(newArr);
+        setArr(newArr);
     }
 
     return (
-        <div>
+        <div id="border">
             <h2>ADD TASK</h2>
             <br />
             <input type="text" onChange={trackChange} /> <button onClick={setChange}>ADD</button>
             <ul>
                 {arr.map((list) => {
+                    let styles={textDecoration: list.toggle=="True" ? "line-through" : "none"};
                     return (
-                        <li key={list.id}>{list.Task}&nbsp;
+                        
+                        <li key={list.id}><p style={styles}>{list.Task}</p> &nbsp;
                             &nbsp; <button onClick={() => deleteTask(list.id)}>Delete</button> &nbsp;&nbsp; <button onClick={() => updateOne(list.id)}>UpperCase</button> <button onClick={()=>updateDone(list.id)}>Mark as Done</button></li>
 
                     );
                 })}
+                <br /><br />
                 <button onClick={updateAll}>UpperCase All</button>
 
             </ul>
