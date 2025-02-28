@@ -3,9 +3,9 @@ import { v4 as uuidv4 } from 'uuid';
 import "./Todo.css";
 
 function Todo() {
-    let [arr, setArr] = useState([{ Task: "Sample-task", id: uuidv4() ,toggle:"False"}, { Task: "Programming", id: uuidv4(),toggle:"False" }]);
+    let [arr, setArr] = useState([{ Task: "Sample-task", id: uuidv4(), toggle: "False" }, { Task: "Programming", id: uuidv4(), toggle: "False" }]);
     let [task, setTask] = useState("");
-    let [toggle,setToggle]=useState("False");
+    let [toggle, setToggle] = useState("False");
 
     let trackChange = (event) => {
         setTask(() => {
@@ -17,8 +17,9 @@ function Todo() {
     let setChange = () => {
         // setArr([...arr, { Task: task, id: uuidv4() }]);
         setArr((prev) => {
-            return ([...prev, { Task: task, id: uuidv4() ,toggle:"False"}]);
+            return ([...prev, { Task: task, id: uuidv4(), toggle: "False" }]);
         });
+        setTask("");
     }
 
 
@@ -32,8 +33,9 @@ function Todo() {
 
     let updateAll = () => {
         let newArr = arr.map((prev) => {
+            
             return {
-                ...prev, toggle:"True"
+                ...prev,toggle:"True"
             };
         });
         console.log(newArr);
@@ -54,18 +56,18 @@ function Todo() {
     }
 
 
-    let updateDone=(_id)=>{
+    let updateDone = (_id) => {
         console.log(_id);
-        let newArr=arr.map((prev)=>{
-            if(prev.toggle==="False" && prev.id===_id){
+        let newArr = arr.map((prev) => {
+            if (prev.toggle === "False" && prev.id === _id) {
                 return {
-                    ...prev,toggle:"True",
+                    ...prev, toggle: "True",
                 }
-            } else if(prev.id===_id && prev.toggle==="True"){
+            } else if (prev.id === _id && prev.toggle === "True") {
                 return {
-                    ...prev,toggle:"False",
+                    ...prev, toggle: "False",
                 }
-            } else if(prev.id!=_id){
+            } else if (prev.id != _id) {
                 return prev
             }
         })
@@ -77,14 +79,17 @@ function Todo() {
         <div id="border">
             <h2>ADD TASK</h2>
             <br />
-            <input type="text" onChange={trackChange} /> <button onClick={setChange}>ADD</button>
+            <input type="text" value={task}  onChange={trackChange} /> <button onClick={setChange}>ADD</button>
             <ul>
                 {arr.map((list) => {
-                    let styles={textDecoration: list.toggle=="True" ? "line-through" : "none"};
+                    let styles = { textDecoration: list.toggle == "True" ? "line-through" : "none" };
                     return (
-                        
+
                         <li key={list.id}><p style={styles}>{list.Task}</p> &nbsp;
-                            &nbsp; <button onClick={() => deleteTask(list.id)}>Delete</button> &nbsp;&nbsp; <button onClick={() => updateOne(list.id)}>UpperCase</button> <button id="DoneBtn" onClick={()=>updateDone(list.id)}>{list.toggle==="True" ? "Mark as Undone" : "Mark as Done"}</button></li>
+                            &nbsp; <button onClick={() => deleteTask(list.id)}>Delete</button> &nbsp;&nbsp;
+                            <button onClick={() => updateOne(list.id)}>UpperCase</button>
+                            <button id="DoneBtn" onClick={() => updateDone(list.id)}>
+                                {list.toggle === "True" ? "Mark as Undone" : "Mark as Done"}</button></li>
 
                     );
                 })}
