@@ -29,15 +29,6 @@ function Todo() {
         // console.log(arr);
     })
 
-    // let updateAll = () => {
-    //     setArr((prev) => {
-    //         prev.map((todo) => {
-    //             return {
-    //                 ...todo, Task: todo.Task.toUpperCase()
-    //             };
-    //         });
-    //     });
-    // };
 
     let updateAll = () => {
         let newArr = arr.map((prev) => {
@@ -84,7 +75,6 @@ function Todo() {
             } else if(prev.id!=_id){
                 return prev
             }
-            
         })
         console.log(newArr);
         setArr(newArr);
@@ -101,7 +91,7 @@ function Todo() {
                     return (
                         
                         <li key={list.id}><p style={styles}>{list.Task}</p> &nbsp;
-                            &nbsp; <button onClick={() => deleteTask(list.id)}>Delete</button> &nbsp;&nbsp; <button onClick={() => updateOne(list.id)}>UpperCase</button> <button onClick={()=>updateDone(list.id)}>Mark as Done</button></li>
+                            &nbsp; <button onClick={() => deleteTask(list.id)}>Delete</button> &nbsp;&nbsp; <button onClick={() => updateOne(list.id)}>UpperCase</button> <button id="DoneBtn" onClick={()=>updateDone(list.id)}>{list.toggle==="True" ? "Mark as Undone" : "Mark as Done"}</button></li>
 
                     );
                 })}
