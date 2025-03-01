@@ -11,12 +11,8 @@ function Lottery() {
             sum = sum + r;
             num = Math.floor(num / 10);
         }
-
         setSum(sum);
     }
-
-
-
     return (
         <div>
             {s === 15 ? <h2>Lottery ,Congratualtions You won!</h2> : <h2>Lottery</h2>}
