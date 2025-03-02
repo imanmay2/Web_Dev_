@@ -1,5 +1,4 @@
-import './App.css'
-import {Todo} from "./Todo.jsx";
+import './App.css';
 import { Lottery } from './Lottery.jsx';
 export default function App(){  
   return (
