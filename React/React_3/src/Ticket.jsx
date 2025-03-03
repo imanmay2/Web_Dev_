@@ -6,10 +6,11 @@ function Ticket({ticketArr,setTicketFn}) {
     }
     return (
         <div className='border'>
-        <h2>
+            <h2>Ticket</h2> 
+        <h1>
         <span>{ticketArr[0]}</span>
         <span>{ticketArr[1]}</span>
-        <span>{ticketArr[2]}</span></h2> <br /> <br />
+        <span>{ticketArr[2]}</span></h1> <br /> <br />
         <button onClick={changeTicket}>Buy Ticket</button>
         </div>
     );
