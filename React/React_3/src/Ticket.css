@@ -1,7 +1,4 @@
-.border{
-    /* display:flex;
-    align-content:space-between; */
-    
+.border{    
     border: 2px solid pink;
     border-radius: 12px;
     height: 200px;
