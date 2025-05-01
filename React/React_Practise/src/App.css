@@ -1,11 +1,22 @@
 .main_div{
   border:2px solid rgb(240, 212, 55);
+  border-radius: 12px;
   height: 400px;
-  width:800px;
-  margin-left:300px;
+  width:1000px;
+  margin-left:215px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
+  
 
 }
 
+.product{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.heading{
+  display: flex;
+  justify-content: center;
+}

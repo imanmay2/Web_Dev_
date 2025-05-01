@@ -1,0 +1,11 @@
+.product_div{
+    border:1px solid rgb(246, 226, 112);
+    border-radius: 12px;
+    padding-left: 8px;
+    padding-right:8px;
+   
+}
+
+.rate{
+    background-color: goldenrod;
+}
