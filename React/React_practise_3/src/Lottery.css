@@ -1,0 +1,21 @@
+.lottery{
+    border: 1px solid #7ffc03;
+    border-radius: 12px;
+    height:200px;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+#num{
+    display: flex;
+    margin-left:50%;
+}
+
+#btn{
+    height:50px;
+    width:200px;
+    margin-left:40%;
+}
