@@ -1,4 +1,5 @@
 import { Counter } from './Counter';
+import {GameBoard} from "./Gameboard";
 import './App.css';
 
 function App() {
