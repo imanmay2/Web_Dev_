@@ -5,7 +5,7 @@ function App() {
   return (
     <div className='main_div'>
       <div className='heading'>
-        <Title content={"Amazon-Great Indian Festival is live!"}></Title></div>  <br /> 
+        <Title content={"Amazon-Great Summer Sale Staring from 1st May(Today)!"}></Title></div>  <br /> 
       <div className='product'>
         <Product heading={"LogiTech MX Master 3S"} features={["8000 DPI", "5 Programmable Buttons"]} rates={["12,495","8,999"]} />
         <Product heading={"Apple Pencil 2nd Gen"} features={["Intutive Touch Surface", "Designing for iPad Pro"]} rates={["12,495","8,999"]}/>
