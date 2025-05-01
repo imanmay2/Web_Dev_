@@ -1,13 +1,14 @@
 import { Counter } from './Counter';
-import {GameBoard} from "./Gameboard";
+import {GameBoard} from "./Gameboard.jsx";
 import './App.css';
 
 function App() {
   
 
   return (
-    <div>
-      <Counter/>
+    <div className="main_div">
+      <h2><u><i>GameBoard</i></u></h2> <br /> <br />
+      <GameBoard/>
     </div>
   )
 }
