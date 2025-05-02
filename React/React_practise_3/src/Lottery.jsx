@@ -1,7 +1,7 @@
 import "./Lottery.css";
 import {Title}  from "./Title";
 import { useState } from "react";
-function Lottery(){
+function Lottery({sum}){
 
     let rand=()=>{
         return Math.floor(Math.random()*10);
@@ -23,6 +23,7 @@ function Lottery(){
             <Title num={set[1]}/>
             <Title num={set[2]}/> </div></h2>
             <button id="btn" onClick={updateTicket}>Buy new Ticket</button>
+            {set[0]+set[1]+set[2]==sum ? <p>Congratulations , You Won!</p>: null}
         </div>
     )
 }

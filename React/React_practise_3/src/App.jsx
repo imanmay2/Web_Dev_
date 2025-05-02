@@ -7,7 +7,7 @@ function App() {
   return (
    <div className="main_div">
     <h2><i id="heading">LOTTERY</i></h2>
-    <Lottery/>
+    <Lottery sum={15}/>
 
    </div>
   )
