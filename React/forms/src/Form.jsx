@@ -2,8 +2,8 @@ import {useState} from 'react';
 
 function Form(){
     let [obj,setObj]=useState({
-        name:"Anwesha",
-        username:"@hello"
+        name:"",
+        username:""
     });
 
     let handleForm=(event)=>{
@@ -16,6 +16,10 @@ function Form(){
     let handleSubmit=(event)=>{
         event.preventDefault();
         console.log(obj);
+        setObj({
+            name:"",
+            username:""
+        })
     }
 
     return (
