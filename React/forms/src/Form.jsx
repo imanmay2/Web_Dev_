@@ -9,12 +9,13 @@ function Form(){
     let handleForm=(event)=>{
         setObj((currData)=>{
             currData[event.target.name]=event.target.value;
-            return currData;
+            return {...currData};
         });
     }
 
     let handleSubmit=(event)=>{
         event.preventDefault();
+
         console.log(obj);
         setObj({
             name:"",
