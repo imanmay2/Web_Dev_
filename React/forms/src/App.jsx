@@ -1,12 +1,12 @@
 import './App.css';
 import {Form} from "./Form.jsx";
-import {CommentForm} from "./CommentForm.jsx";
+import {Comment} from "./Comment.jsx";
 function App() {
   
 
   return (
     <>
-    <CommentForm/>
+    <Comment />
     </>
   )
 }

@@ -1,7 +1,6 @@
 import { useState } from "react";
-
-function CommentForm(){
-    let [idx,setIdx]=useState(0);
+function CommentForm({addComment}){
+    // let [idx,setIdx]=useState(0);
     let [obj,setObj]=useState({
         Username:"",
         Password:"",
@@ -9,27 +8,21 @@ function CommentForm(){
         Rating:""
     });
 
-    let [data,setData]=useState([]);
-
-    let addData=()=>{
-        setIdx(idx+1);
-        setData((currData)=>{
-            return [...currData,currData[idx]=obj];
-        })
-    }
 
     let handleInput=(event)=>{
         setObj((currObj)=>{
-            // currObj[event.target.name]=event.target.value;
+            
             return {...currObj,[event.target.name]:event.target.value};
         })
     }
 
     let handleSubmit=(event)=>{
-        
-        addData();
-        console.log(data);
         event.preventDefault();
+        
+        addComment(obj);
+        console.log(obj);
+        
+        
     }
 
     return (
