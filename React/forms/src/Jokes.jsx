@@ -1,17 +1,28 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-function Jokes(){
-    const URL="https://official-joke-api.appspot.com/random_joke";
-    let [jokes,setJokes]=useState({});
+function Jokes() {
+    const URL = "https://official-joke-api.appspot.com/random_joke";
+    let [jokes, setJokes] = useState({});
 
-    let getJokes=async ()=>{
-        let res=await fetch(URL);
-        let response=await res.json();
+    let getJokes = async () => {
+        let res = await fetch(URL);
+        let response = await res.json();
         // console.log(response);
         setJokes(response);
     }
 
-    return(
+    useEffect(() => {
+        async function joke_() {
+            let res = await fetch(URL);
+            let response = await res.json();
+            // console.log(response);
+            setJokes(response);
+        } joke_()
+    },[])
+
+
+
+    return (
         <div>
             <h1>Jokes!</h1>
             <h2>{jokes.setup}</h2>
@@ -23,4 +34,4 @@ function Jokes(){
     )
 }
 
-export {Jokes};
+export { Jokes };
