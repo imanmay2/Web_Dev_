@@ -1,0 +1,15 @@
+.location{
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+}
+
+.input_{
+    border-radius: 12px;
+    border-color: azure;
+    background-color: white;
+    height:4vh;
+    width:28vh;
+    color:black;
+    margin-left:12vh;
+}
