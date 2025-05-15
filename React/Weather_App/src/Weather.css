@@ -11,5 +11,33 @@
     height:4vh;
     width:28vh;
     color:black;
-    margin-left:12vh;
+    margin-left:3vh;
+}
+
+.weather{
+  display:flex;
+  flex-direction:column;
+}
+
+
+.temp{
+  margin-top:5px !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+
+.grey{
+  background-color: rgb(213, 211, 211);
+  height:7vh;
+  width:20vh;
+  border-radius: 8px;
+  
+  color:azure;
+}
+
+.text{
+  color:black;
+  
 }
