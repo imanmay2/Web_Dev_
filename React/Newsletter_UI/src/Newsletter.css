@@ -1,0 +1,10 @@
+.headern{
+    --bg-color: rgba(9, 202, 232, 0.914);
+    background-color: var(--bg-color);
+}
+
+
+.main{
+    display: flex;
+    justify-content: center;
+}
