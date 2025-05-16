@@ -12,10 +12,10 @@ function NewsLetter() {
                 <font className="bold_">Stay up to date with the Latest!</font> <br />
                 Subscribe to our newsletter for the latest news straight into your inbox. <br /> <br />
                 <div className="email">
-                    
-                </div> <br /> <br />
-                <Button variant="contained" className="size_ color_btn">Contained</Button> <br /><br />
-                We value your privacy
+                    your@gmail.com
+                </div> <br /> 
+                <Button variant="contained" className="size_ color_btn">Subscribe Now</Button> <br /><br />
+                We value your privacy.
             </div>
         </div>
     )
