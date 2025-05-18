@@ -7,15 +7,16 @@ function Todo(){
     let doneBtn=(id)=>{
         console.log(todosObj.todos);
         dispatch(markAsDone(id));
-
-
+        let q=document.querySelector(`#${id}`);
+        if(q){
+            q.style.textDecoration="line-through";
+        }
     }
 
 
     let deleteBtn=(id)=>{
         console.log(id);
         dispatch(deleteTask(id));
-
     }
 
 
@@ -23,7 +24,6 @@ function Todo(){
         <>
         <Form todos={todosObj.todos} dispatch={dispatch} doneBtn={doneBtn} deleteBtn={deleteBtn} addTodo={addTodo} markAsDone={markAsDone} deleteTask={deleteTask}/>
         <h2>Add Your Todo!</h2>
-
         <ul>
         {todosObj.todos.map((todo)=>
          (<li key={todo.id}>{todo.task} &nbsp;&nbsp;
