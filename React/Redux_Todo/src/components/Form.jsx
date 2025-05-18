@@ -1,9 +1,6 @@
-import { useState } from "react"
+import {useState} from "react"
 
-import { addTodo, markAsDone, deleteTask } from "../app/features/todo/todoSlice";
-
-function Form({todos,dispatch}) {
-    // console.log(todos);
+function Form({ todos, dispatch , deleteBtn,doneBtn,addTodo, markAsDone, deleteTask }) {
     let [text, setText] = useState("");
     let handleChange = (event) => {
         setText(() => {
@@ -14,13 +11,13 @@ function Form({todos,dispatch}) {
 
     let handleSubmit = (event) => {
         event.preventDefault();
-        console.log("Task is ",text);
-        
-
-        dispatch(addTodo(text));
-        setText(()=>{
-            return [event.target["add_"]]="";
-        });   //Resetting the input field.
+        if (text) {
+            console.log("Task is ", text);
+            dispatch(addTodo(text));
+            setText(() => {
+                return [event.target["add_"]] = "";
+            });   //Resetting the input field.
+        }
     }
 
     return (
