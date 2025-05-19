@@ -24,5 +24,4 @@ function levelUp(){
     count++;
     h3.innerText=`Level ${count}`;
     let btns=document.querySelectorAll("btn");
-
 }
