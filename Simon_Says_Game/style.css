@@ -1,3 +1,51 @@
 body{
     background-image: linear-gradient(to right,rgb(63, 216, 250),rgb(121, 247, 121));
+    text-align:center;
+}
+
+.game{
+    display:flex;
+    flex-direction: column;
+
+}
+.firstLine, .secondLine{
+    display: flex;
+    justify-content: center;
+}
+
+
+.yellow{
+    background-color: #f99b45;
+    width:20vh;
+    height:20vh;
+    margin:8px;
+    border: 3px solid black;
+    border-radius:16px;
+}
+
+.red{
+    background-color: #d95980;
+    width:20vh;
+    height:20vh;
+    margin:8px;
+    border: 3px solid black;
+    border-radius:16px;
+}
+
+.purple{
+    background-color: #819ff9;
+    width:20vh;
+    height:20vh;
+    margin:8px;
+    border: 3px solid black;
+    border-radius:16px;
+}
+
+.green{
+    background-color: #63aac0;
+    width:20vh;
+    height:20vh;
+    margin:8px;
+    border: 3px solid black;
+    border-radius:16px;
 }
