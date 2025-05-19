@@ -10,8 +10,12 @@ document.addEventListener("keypress",function start(){
     }
 });
 
+
 function btnflash(btn){
-    
+    btn.classList.add("flash");
+    setTimeout(function remove(){
+        btn.classList.remove("flash");
+    },250);
 }
 
 function levelUp(){
@@ -19,7 +23,6 @@ function levelUp(){
     let h3=document.querySelector("h3");
     count++;
     h3.innerText=`Level ${count}`;
-
     let btns=document.querySelectorAll("btn");
 
 }
