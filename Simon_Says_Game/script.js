@@ -59,9 +59,7 @@ function btnPress() {
     //check logic.
     if (userGame[count] != game[count]) {
         gameEnd();
-
         setTimeout(resetGame,5000);
-
         return;
     } else{
         count++;
