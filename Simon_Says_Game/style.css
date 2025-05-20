@@ -58,3 +58,8 @@ body{
 .userflash{
     background-color: green;
 }
+
+
+.errorFlash{
+    background-color: red;
+}
