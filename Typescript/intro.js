@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var myNum = 1234;
+myNum.toFixed(2);
+console.log(typeof (myNum));
+console.log(typeof (myNum.toFixed(2)));
+console.log(parseFloat(myNum.toFixed(2)));
+console.log(("Hello + "+myNum));
+console.log((myNum.toFixed(2)));
+console.log(parseFloat(myNum.toFixed(2)));
