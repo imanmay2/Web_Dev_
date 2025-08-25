@@ -9,6 +9,5 @@ func main(){
 	fmt.Scan(&username);
 	fmt.Printf("Enter the age : ");
 	fmt.Scan(&age);
-
 	fmt.Printf("Hello %v , Your age is %v",username,age);
 }
