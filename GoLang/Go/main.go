@@ -2,7 +2,13 @@ package main
 import "fmt"
 
 func main(){
-	fmt.Println("Hello ");
-	fmt.Println("Hey, I am Manmay Chakraborty.");
-	fmt.Println("A passionate Backend Developer.");
+	
+	var username string;
+	var age int;
+	fmt.Printf("Enter the username : ");
+	fmt.Scan(&username);
+	fmt.Printf("Enter the age : ");
+	fmt.Scan(&age);
+
+	fmt.Printf("Hello %v , Your age is %v",username,age);
 }
