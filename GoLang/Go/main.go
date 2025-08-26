@@ -89,7 +89,7 @@ func main(){
 	validateEmail:=strings.Contains(email,"@");
 	fmt.Println(validateEmail);
 
-	//helper package
+	//helper package.
 
 	greet("Anwesha",21);
 	fmt.Println();
