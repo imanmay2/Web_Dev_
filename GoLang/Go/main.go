@@ -1,16 +1,21 @@
 package main
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
+func greetUsers(username string,age uint){
+	fmt.Printf("Welcome to GoLang %v , your age is calculated as : %v",username,age);
+}
 func main(){
 	
-	// var username string;
-	// var age int;
-	// fmt.Printf("Enter the username : ");
-	// fmt.Scan(&username);
-	// fmt.Printf("Enter the age : ");
-	// fmt.Scan(&age);
-	// fmt.Printf("Hello %v , Your age is %v",username,age);
-
+	var username string;
+	var age uint;
+	fmt.Printf("Enter the username : ");
+	fmt.Scan(&username);
+	fmt.Printf("Enter the age : ");
+	fmt.Scan(&age);
+	greetUsers(username,age);
 
 	//Arrays
 	fmt.Println("Welcome to GoLang.");
@@ -44,10 +49,11 @@ func main(){
 
 
 	//Q2. Creates the slice from the array , that contains only even numbers.
+	
 	slice:=[]int{};
 
-	for idx,val:=range arr1{
-		if(arr1[idx]%2==0){
+	for _,val:=range arr1{
+		if(val%2==0){
 			slice=append(slice,val);
 		}
 	}
@@ -77,4 +83,9 @@ func main(){
 	}
 
 	fmt.Println("Sum of the Slice Elements is: ",sum);
+
+	//String validation.
+	email:="imanmay2gmail.com";
+	validateEmail:=strings.Contains(email,"@");
+	fmt.Println(validateEmail);
 }
