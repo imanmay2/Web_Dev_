@@ -88,4 +88,10 @@ func main(){
 	email:="imanmay2gmail.com";
 	validateEmail:=strings.Contains(email,"@");
 	fmt.Println(validateEmail);
+
+	//helper package
+
+	greet("Anwesha",21);
+	fmt.Println();
+	fmt.Println(checkPrime(6));
 }
