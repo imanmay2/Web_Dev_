@@ -1,14 +1,16 @@
 package main
+
 import (
 	"fmt"
-	"helper/helper"
+	"Go2/helper"
 )
 
+
 func GreetMain(){
-	fmt.Println("Hello from D2");
+	fmt.Println("Welcome to GoLang from main.");
 }
 
 func main(){
-	helper.GreetGoLang();
 	GreetMain();
+	helper.GreetUser();
 }
