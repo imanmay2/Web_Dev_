@@ -26,21 +26,20 @@ func main(){
 		ctx.String(200,"User ID : %s",id);
 	})
 
-	
+	//post request
 	app.POST("/setData",func(ctx *gin.Context){
 		var userData User;
-
-		//binding the incoming request.
 		if err:=ctx.ShouldBindJSON(&userData);
 		err!=nil{
 			ctx.JSON(400,gin.H{"Error":err.Error()});
 			return;
 		}
 
+		//No error
 		fmt.Println(userData);
-
 		ctx.JSON(200,gin.H{"Message":"Data saved successfully."});
 	})
+	
 
 	app.Run(":8080");
 }
