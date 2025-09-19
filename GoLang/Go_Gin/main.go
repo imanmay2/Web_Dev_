@@ -39,6 +39,18 @@ func main(){
 		fmt.Println(userData);
 		ctx.JSON(200,gin.H{"Message":"Data saved successfully."});
 	})
+
+
+	app.POST("/setData2",func(ctx *gin.Context){
+		Name:=ctx.PostForm("name");
+		Email:=ctx.PostForm("email");
+		Age:=ctx.PostForm("age");
+
+		ctx.JSON(200,gin.H{"Name":Name,"Email":Email,"Age":Age});
+		ctx.String(200,"\nData Saved successfully");
+	})
+
+	//grouping the routes.
 	
 
 	app.Run(":8080");
