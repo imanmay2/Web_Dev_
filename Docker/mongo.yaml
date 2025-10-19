@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+  mongo:
+    image: mongo
+    ports:
+    - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: imanmay2
+      MONGO_INITDB_ROOT_PASSWORD: 1234
+  
+  mongo-express:
+    image: mongo-express
+    ports:
+    - "8081:8081"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: imanmay2
+      MONGO_INITDB_ROOT_PASSWORD: 1234
+      ME_CONFIG_MONGODB_URL: mongodb://imanmay2:1234@mongo:27017/
+
+
+

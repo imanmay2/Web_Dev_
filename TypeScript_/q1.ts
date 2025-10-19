@@ -56,6 +56,7 @@ for(let i of avgMarks){
 
 console.log(students[idx].name+" is having the highest average marks with : "+avgMarks[idx]);
 
-// printing the students name along their average marks.
+
+
 
 export {};
