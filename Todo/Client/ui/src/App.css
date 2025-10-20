@@ -1,0 +1,89 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  /* padding: 2rem; */
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.inp1{
+    margin-left: 2rem;
+    border-radius: 12px;
+    background-color: rgb(249, 190, 132);
+    width:20rem;
+}
+
+hr{
+    width: 90%;
+    height: 1px;
+    margin-top:2rem;
+    background: rgb(67, 66, 66);
+    opacity: 0.5;
+
+}
+
+.add, button{
+    border-radius: 8px;
+    color:black;
+    background-color: rgb(117, 130, 130);
+    margin-left:4rem;
+    padding:2 rem;
+}
+
+button{
+    margin-left: 0;
+    padding:0.2rem;
+}
+
+.container{
+    min-width:35vw;
+    min-height:84vh;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(206, 207, 208);
+    border-radius: 16px;
+    box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.3);
+    padding:0.5rem;
+    margin-top: 1rem;
+}
+
+.placeholder{
+    display: flex;
+    flex-direction: row;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
