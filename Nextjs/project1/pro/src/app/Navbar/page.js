@@ -1,9 +1,12 @@
+"use client"
 
-
+import Link from "next/link";
 function Navbar(){
   return(
     <>
-    This is the Navbar.
+    <div className="container">
+      <div><Link href="/about">About</Link></div>
+    </div>
     </>
   )
 }
