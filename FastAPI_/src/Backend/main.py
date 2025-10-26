@@ -1,5 +1,7 @@
 from fastapi import FastAPI
-
+from pydantic import BaseModel
+from typing import Optional
+import uvicorn
 app=FastAPI();
 
 # basic get request . 
@@ -28,3 +30,14 @@ def blog(limit:str,published:bool=False):
     else:
         return {'data':f"{limit} blogs from the database"}
     
+
+class Blog(BaseModel):
+    title:str
+    created_at:Optional[str]
+
+@app.post("/blogs")
+def createBlog(request:blog):
+    return {"data": f"Welcome to the blog and it's title is : {blog.title}"}
+
+
+
