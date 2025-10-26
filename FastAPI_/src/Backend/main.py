@@ -17,3 +17,14 @@ def about():
 @app.get('/about/{id_}')
 def about(id_:int):
     return {"data" : "Welcome to the about page","id":id_}
+
+
+# query parameter.
+@app.get("/blog/")
+def blog(limit:str,published:bool=False):
+    print(limit);
+    if(published):
+        return {'data':f"{limit} published blogs from the database."}
+    else:
+        return {'data':f"{limit} blogs from the database"}
+    
