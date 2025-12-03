@@ -38,6 +38,3 @@ class Blog(BaseModel):
 @app.post("/blogs")
 def createBlog(request:blog):
     return {"data": f"Welcome to the blog and it's title is : {blog.title}"}
-
-
-
