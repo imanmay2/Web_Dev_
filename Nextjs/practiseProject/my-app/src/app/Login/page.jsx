@@ -10,7 +10,7 @@ export default function Login(){
 
     let handleChange=(e)=>{
         setForm({...form,[e.target.name]:e.target.value})
-    }
+    };
 
     let submit=(e)=>{
         e.preventDefault();
