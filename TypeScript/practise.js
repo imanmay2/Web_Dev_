@@ -29,4 +29,14 @@ var handleError = function (errMsg) {
         console.log(errMsg);
     }
 };
-handleError("Intensional Crash for trial period.");
+var funcObj = function (userDetails) {
+    var newObj = { n: "Anwesha", age: userDetails.age };
+    return newObj;
+};
+var printObj = function (userDetails) {
+    console.log("Name of the person is :  " + userDetails.n);
+    console.log("Age is : " + userDetails.age);
+};
+printObj({ n: "Manmay", age: 24 });
+var newObj = funcObj({ n: "Manmay", age: 24 });
+printObj(newObj);

@@ -32,9 +32,29 @@ let handleError=(errMsg:string):void=>{
     } catch(errMsg){
         console.log(errMsg);
     }
-    
+}
+// handleError("Intensional Crash for trial period.");
+
+
+
+
+type user={
+    n:string,
+    age:number
 }
 
-// handleError("Intensional Crash for trial period.");
+let funcObj=(userDetails:user):user=>{
+    let newObj:user={n:"Anwesha",age:userDetails.age};
+    return newObj;
+}
+
+let printObj=(userDetails:user):void=>{
+    console.log("Name of the person is :  "+userDetails.n);
+    console.log("Age is : "+userDetails.age);
+}
+
+printObj({n:"Manmay",age:24});
+let newObj:user=funcObj({n:"Manmay",age:24});
+printObj(newObj);
 
 export {};
