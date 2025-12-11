@@ -1,20 +1,32 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-function getSum(num) {
-    return num + num;
+var n = "anwesha";
+console.log(n);
+var num = 20.4567;
+console.log(parseFloat(num.toFixed(2)));
+//functions in typescript. 
+function printData(name) {
+    return ("Welcome to Typescript " + name);
 }
-var getSum2 = function (num, num2) {
-    if (num2 === void 0) { num2 = 5; }
-    console.log(num * num2);
+//arrow functions.
+var arrowFunc = function (name) {
+    return ("Welcome to Typescript , You can do it alone " + name);
 };
-var arr = [1, 2, 3, 4, 5, 6, 7, 8];
-arr.map(function (num) {
-    console.log(num + " ");
+var str = printData("Manmay");
+console.log(str);
+console.log(arrowFunc("Lopa"));
+//Arrays
+var arr = ["Anwesha", "Shaktimaan", "Manmay", "Welcome"];
+arr.map(function (ele) {
+    console.log("Name is : " + ele);
 });
-console.log(getSum(4));
-getSum2(4);
-function createUser(user) {
-    return { username: user.username, email: user.email, age: user.age };
-}
-var usercreated = createUser({ username: "imanmay2", email: "imanmay2@gmail.com", age: 21 });
-console.log(usercreated);
+//handling the error using never 
+var handleError = function (errMsg) {
+    try {
+        throw new Error(errMsg);
+    }
+    catch (errMsg) {
+        console.log(errMsg);
+    }
+};
+handleError("Intensional Crash for trial period.");

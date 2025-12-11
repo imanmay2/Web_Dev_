@@ -1,33 +1,40 @@
-function getSum(num:number):number{
-    return num+num;
+let n:string="anwesha";
+console.log(n);
+
+let num:number=20.4567;
+console.log(parseFloat(num.toFixed(2)));
+
+//functions in typescript. 
+function printData(name:string):string{
+    return ("Welcome to Typescript "+name);
 }
 
-let getSum2=(num:number,num2:number=5):void=>{
-    console.log(num*num2);
+//arrow functions.
+let arrowFunc=(name:string):string=>{
+    return ("Welcome to Typescript , You can do it alone "+name);
 }
 
-let arr=[1,2,3,4,5,6,7,8];
+let str:string=printData("Manmay");
+console.log(str);
 
-arr.map((num:number):void=>{
-    console.log(num+" ");
-})
+console.log(arrowFunc("Lopa"));
 
-console.log(getSum(4));
-getSum2(4);
+//Arrays
+let arr:string[]=["Anwesha","Shaktimaan","Manmay","Welcome"];
+arr.map((ele:string):void=>{
+    console.log("Name is : "+ ele);
+});
 
-
-type User={
-    username:string,
-    email:string,
-    age:number
+//handling the error using never 
+let handleError=(errMsg:string):void=>{
+    try{
+        throw new Error(errMsg);
+    } catch(errMsg){
+        console.log(errMsg);
+    }
+    
 }
 
-function createUser(user:User):User{
-    return {username:user.username,email:user.email,age:user.age};
-}
-
-let usercreated=createUser({username:"imanmay2",email:"imanmay2@gmail.com",age:21});
-
-console.log(usercreated);
+// handleError("Intensional Crash for trial period.");
 
 export {};
