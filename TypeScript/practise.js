@@ -80,7 +80,7 @@ var arr2DFunc = function (arr) {
     }
 };
 var funcPrint2D = function (arr) {
-    for (var i = 0; i < arr.length; i++) {
+    for (var i = 1; i < arr.length; i++) {
         for (var j = 0; j < arr[i].length; j++) {
             console.log(arr[i][j] + " ");
         }
@@ -88,7 +88,62 @@ var funcPrint2D = function (arr) {
     }
 };
 var arr12 = [];
-console.log("2D array is as follows : ");
-arr2DFunc(arr12);
-console.log("wec");
-funcPrint2D(arr12);
+var funcSee = function (obj) {
+    console.log("Name of the customer is : " + obj.custName);
+    console.log("Age of the customer : " + obj.age);
+    console.log("Address where he lives : " + obj.address);
+    if (obj.pin) {
+        console.log("Pin details : " + obj.pin);
+    }
+    else {
+        console.log("Pin details not found!!");
+    }
+};
+funcSee({ custName: "Anwesha", age: 12, address: "Raiganj", pin: 733134 });
+//Classes & Objects in Typescript.
+var User = /** @class */ (function () {
+    function User(email, name) {
+        this.courseCount = 1;
+        this.email = email;
+        this.name = name;
+    }
+    Object.defineProperty(User.prototype, "getUserEmail", {
+        get: function () {
+            return "Email is : " + this.email;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(User.prototype, "getUserName", {
+        get: function () {
+            return "Name of the user is : " + this.name;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(User.prototype, "setCourseCount", {
+        set: function (courseCount) {
+            if (courseCount <= 1) {
+                console.log("Course Count is set to 1");
+                return;
+            }
+            courseCount++;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(User.prototype, "getCourseCount", {
+        get: function () {
+            return this.courseCount;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return User;
+}());
+var manmay = new User("imanmay2@gmail.com", "Manmay");
+console.log(manmay.getCourseCount);
+console.log(manmay.getUserEmail);
+console.log(manmay.getUserName);
+manmay.setCourseCount;
+console.log(manmay.getCourseCount);

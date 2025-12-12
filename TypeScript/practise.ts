@@ -120,7 +120,7 @@ let arr2DFunc=(arr:Array<Array<number>>):void=>{
 }
 
 let funcPrint2D=(arr:Array<Array<number>>):void=>{
-    for(let i=0;i<arr.length;i++){
+    for(let i=1;i<arr.length;i++){
         for(let j=0;j<arr[i].length;j++){
             console.log(arr[i][j]+" ");
         }
@@ -129,9 +129,74 @@ let funcPrint2D=(arr:Array<Array<number>>):void=>{
 }
 let arr12:Array<Array<number>>=[];
 
-console.log("2D array is as follows : ");
-arr2DFunc(arr12);
-console.log("wec");
-funcPrint2D(arr12);
+
+
+
+//dealing with interfaces.
+
+interface customer{
+    custName:string,
+    age:number
+}
+
+interface userType{
+    address:"Kaliyaganj"|"Raiganj",
+    pin?:733129|733134;
+}
+
+let funcSee=(obj:customer&userType):void=>{
+    console.log("Name of the customer is : "+obj.custName);
+    console.log("Age of the customer : "+obj.age);
+    console.log("Address where he lives : "+obj.address);
+    if(obj.pin){
+        console.log("Pin details : "+obj.pin);
+    }else{
+        console.log("Pin details not found!!");
+    }
+}
+
+funcSee({custName:"Anwesha",age:12,address:"Raiganj",pin:733134});
+
+
+//Classes & Objects in Typescript.
+class User{
+
+    private courseCount:number=1;
+    email:string | undefined;
+    name:string | undefined;
+    
+    constructor(email:string,name:string){
+        this.email=email;
+        this.name=name;
+    }
+
+    get getUserEmail():string{
+        return "Email is : "+this.email;
+    }
+
+    get getUserName():string{
+        return "Name of the user is : "+this.name;
+    }
+
+    set setCourseCount(courseCount:number){
+        if(courseCount<=1){
+            console.log("Course Count is set to 1");
+            return;
+        }
+        courseCount++;
+    }
+
+    get getCourseCount():number{
+        return this.courseCount;
+    }
+}
+
+
+let manmay=new User("imanmay2@gmail.com","Manmay");
+console.log(manmay.getCourseCount);
+console.log(manmay.getUserEmail);
+console.log(manmay.getUserName);
+manmay.setCourseCount;
+console.log(manmay.getCourseCount);
 
 export {};
