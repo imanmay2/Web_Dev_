@@ -147,3 +147,32 @@ console.log(manmay.getUserEmail);
 console.log(manmay.getUserName);
 manmay.setCourseCount;
 console.log(manmay.getCourseCount);
+//dealing with generics
+function printGen(num) {
+    // console.log("Number is "+num);
+    return num;
+}
+var arrowGen = function (val1, val2) {
+    console.log("Values are : " + val1 + " " + val2);
+};
+var printObj_ = function (val1, val2) {
+    return { val1: val1, val2: val2 };
+};
+console.log(printObj_(24, { username: "imanmay2", password: "postgreSQL@123" }));
+console.log(typeof ("welcome"));
+//dealing with Type Narrowing.
+var typeNarrow = function (val) {
+    if (typeof (val) === "object") {
+        for (var _i = 0, val_1 = val; _i < val_1.length; _i++) {
+            var i = val_1[_i];
+            console.log("Element is : " + i);
+        }
+        console.log();
+    }
+    else {
+        console.log("String is : " + val);
+    }
+};
+typeNarrow([1, 2, 3, 4]);
+console.log();
+typeNarrow("Anwesha");

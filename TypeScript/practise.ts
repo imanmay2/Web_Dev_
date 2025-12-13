@@ -199,4 +199,83 @@ console.log(manmay.getUserName);
 manmay.setCourseCount;
 console.log(manmay.getCourseCount);
 
+
+//dealing with generics
+
+function printGen<T>(num:T):T{
+    // console.log("Number is "+num);
+    return num;
+}
+
+let arrowGen=<T,U extends number>(val1:T,val2:U):void=>{
+    console.log("Values are : "+val1+" "+val2);
+}
+
+interface Database{
+    connection?:string,
+    username:string,
+    readonly password:"mysql@123" | "mongodb@123" | "postgreSQL@123"
+}
+
+
+let printObj_=<T,U extends Database>(val1:T,val2:U):object=>{
+    return{val1,val2}
+}
+
+console.log(printObj_(24,{username:"imanmay2",password:"postgreSQL@123"}));
+console.log(typeof("welcome"));
+
+
+//dealing with Type Narrowing.
+let typeNarrow=(val:string | Array<number>)=>{
+     if(typeof(val)==="object"){
+        for(let i of val){
+            console.log("Element is : "+i);
+        }console.log();
+     } else{
+        console.log("String is : "+val);
+     }
+}
+
+typeNarrow([1,2,3,4]);
+console.log();
+typeNarrow("Anwesha");
+
+// dealing with the discriminated union.
+
+
+interface Square{
+    kind:"square",
+    side:number
+}
+
+interface Rectangle{
+    kind:"rectangle",
+    length:number
+    width:number
+}
+
+interface Circle{
+    kind:"circle"
+    radius:number
+}
+
+type Shape=Square|Rectangle|Circle;
+
+function getArea(shape:Shape){
+    let kind:string=shape.kind;
+    switch(kind){
+        case "square":
+            return shape.side**2;
+        
+        case "rectangle":
+            return (shape.length * shape.width);
+
+        case "circle":
+            return (shape.radius**2)*3.14;
+
+        //add the default case.
+    }
+}
+
 export {};
