@@ -1,0 +1,42 @@
+services:
+  app:
+    image: imanmay2/trial_node_app:latest
+    restart: always
+    container_name: node_app
+    ports:
+      - 8000:8000
+    environment:
+      MONGO_DB_USERNAME: imanmay2
+      MONGO_DB_PWD: Manmay_1234
+      MONGO_HOST: mongo
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    container_name: mongo_db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: imanmay2
+      MONGO_INITDB_ROOT_PASSWORD: Manmay_1234
+    volumes: 
+      - mongo_data:/data/db
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    container_name: mongo_express
+    environment:
+      ME_CONFIG_MONGODB_URL: mongodb://imanmay2:Manmay_1234@mongo:27017/?authSource=admin
+      ME_CONFIG_BASICAUTH_ENABLED: true
+      ME_CONFIG_BASICAUTH_USERNAME: manmayAdmin
+      ME_CONFIG_BASICAUTH_PASSWORD: passAdmin
+    depends_on: 
+      - mongo
+
+volumes:
+  mongo_data:
