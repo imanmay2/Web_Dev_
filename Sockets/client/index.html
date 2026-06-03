@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
+    <script>
+        const socket=io("http://localhost:8080");
+        socket.on("connect",()=>{
+            console.log("User_id : ",socket.id);
+            socket.emit("sendMsg",{name:"Manmay"})
+        });
+
+        socket.on("receiveMsg",(data)=>{
+            console.log(data.msg);
+        });
+
+        //now sending to the particular room with a room_id.
+        socket.on("join_room",{room:"room1",msg:"Welcome Manmay."})
+        
+    </script>
+</body>
+</html>
