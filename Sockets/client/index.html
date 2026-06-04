@@ -1,30 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
     <script>
-        let room_ID="";
-        const socket=io("http://localhost:8080");
-        socket.on("connect",async()=>{
-            console.log("User_id : ",socket.id);
+        let room_ID = "";
+        const socket = io("http://localhost:8080");
+        socket.on("connect", async () => {
+            console.log("User_id : ", socket.id);
 
             // // first step create the room_id and join.
-            room_ID="room_"+socket.id;
-            socket.emit("join_room",room_ID);
+            room_ID = "room_" + socket.id;
+            socket.emit("join_room", room_ID);
             // socket.emit("sendMsg",{name:"Manmay"})
 
-
             // sending a message to a particular room user.
-        let data={
-            room_id:room_ID,
-            msg:"Welcome Manmay, how are you doing."
-        }
-        socket.emit("sendMsgRoom",data)
+            let data = {
+                room_id: room_ID,
+                msg: "Welcome Manmay, how are you doing."
+            }
+            socket.emit("sendMsgRoom", data)
         });
 
         // socket.on("receiveMsg",(data)=>{
@@ -32,11 +33,12 @@
         // });
 
 
-        
 
-        socket.on("receive_",(msg)=>{
-            console.log("Msg back from server after testing  : rooms concept : "+msg);
+
+        socket.on("receive_", (msg) => {
+            console.log("Msg back from server after testing  : rooms concept : " + msg);
         });
     </script>
 </body>
+
 </html>
