@@ -12,29 +12,28 @@
     <script>
         let room_ID = "";
         const socket = io("http://localhost:8080");
+        let userId="user_"+Math.floor(Math.random()*100).toString();
+        //send the user_id to server, and server will store the user_id + socket.id
+        socket.emit("store_user",userId)
         socket.on("connect", async () => {
-            console.log("User_id : ", socket.id);
-
+            // console.log("User_id : ", socket.id);
+            console.log(userId);
             // // first step create the room_id and join.
-            room_ID = "room_" + socket.id;
-            socket.emit("join_room", room_ID);
-            // socket.emit("sendMsg",{name:"Manmay"})
+            // room_ID = "room_" + socket.id;
+            // socket.emit("join_room", room_ID);
+            // // socket.emit("sendMsg",{name:"Manmay"})
 
-            // sending a message to a particular room user.
-            let data = {
-                room_id: room_ID,
-                msg: "Welcome Manmay, how are you doing."
-            }
-            socket.emit("sendMsgRoom", data)
+            // // sending a message to a particular room user.
+            // let data = {
+            //     room_id: room_ID,
+            //     msg: "Welcome Manmay, how are you doing."
+            // }
+            // socket.emit("sendMsgRoom", data)
         });
 
-        // socket.on("receiveMsg",(data)=>{
-        //     console.log(data.msg);
-        // });
-
-
-
-
+        socket.on("receiveMsg",(data)=>{
+            console.log(data.msg);
+        });
         socket.on("receive_", (msg) => {
             console.log("Msg back from server after testing  : rooms concept : " + msg);
         });
